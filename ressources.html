@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sécurité, écologie et liens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero"><div class="w">
+<p class="sur">Bootcamp IA Lysi · À garder sous la main</p>
+<h1>Sécurité, écologie et liens utiles</h1>
+<p>Les réponses aux questions qu'on vous posera, à vous ou à vos clients. Chaque affirmation renvoie à sa source officielle, vérifiée le 16 septembre 2026.</p>
+</div></header>
+<nav class="menu">
+<a href="index.html">← Sommaire</a><a href="#securite">Vos données</a><a href="#m365">Microsoft 365</a><a href="#ecologie">Impact écologique</a><a href="#liens">Liens utiles</a>
+</nav>
+<main>
+
+<section id="securite">
+<h2>Ce que Claude fait de vos données</h2>
+<p>Lysi utilise l'offre <b>Team</b>, une offre commerciale. Elle ne suit pas les mêmes règles que les comptes personnels gratuits ou Pro.</p>
+<div class="tablewrap"><table>
+<tr><th>La question</th><th>La réponse</th><th>Source</th></tr>
+<tr><td>Nos données servent-elles à entraîner l'IA ?</td><td><b>Non, par défaut.</b> Les conditions commerciales d'Anthropic l'écrivent noir sur blanc : « Anthropic may not train models on Customer Content from Services ».</td><td><a href="https://www.anthropic.com/legal/commercial-terms">Conditions commerciales</a> · <a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training">Centre de confidentialité</a></td></tr>
+<tr><td>Quelles certifications ?</td><td><b>ISO 27001:2022</b> (sécurité de l'information), <b>ISO/IEC 42001:2023</b> (management de l'IA), <b>SOC 2 Type I et Type II</b>.</td><td><a href="https://support.claude.com/en/articles/10015870-what-certifications-has-anthropic-obtained">Certifications</a> · <a href="https://trust.anthropic.com/">Trust Center</a></td></tr>
+<tr><td>Et le RGPD ?</td><td>Un <b>accord de traitement des données (DPA)</b> est inclus automatiquement dans les conditions commerciales, avec les <b>clauses contractuelles types</b> européennes pour les transferts hors UE. Accepter les conditions vaut acceptation du DPA, sans signature séparée.</td><td><a href="https://privacy.claude.com/en/articles/7996862-how-do-i-view-and-sign-your-data-processing-addendum-dpa">DPA</a></td></tr>
+<tr><td>Qui sont les sous-traitants ?</td><td>La liste est publiée par Anthropic.</td><td><a href="https://trust.anthropic.com/subprocessors">Sous-traitants</a></td></tr>
+<tr><td>Anthropic suit-il les règles européennes sur l'IA ?</td><td>Anthropic est <b>signataire du code de bonnes pratiques européen</b> pour les modèles d'IA à usage général.</td><td><a href="https://digital-strategy.ec.europa.eu/en/policies/gpai-code-practice">Commission européenne</a></td></tr>
+<tr><td>Connexion sécurisée ?</td><td>L'offre Team permet l'<b>authentification unique (SSO)</b> avec l'annuaire de l'entreprise.</td><td><a href="https://support.claude.com/en/articles/13132885-set-up-single-sign-on-sso">SSO</a> · <a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">L'offre Team</a></td></tr>
+<tr><td>Combien de temps sont gardées les conversations ?</td><td>Les règles de conservation sont détaillées par Anthropic pour les organisations. Sur l'offre Enterprise, l'administrateur peut fixer sa propre durée.</td><td><a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">Conservation</a></td></tr>
+<tr><td>Où sont hébergées les données ?</td><td>Les pages d'aide de l'offre Team ne mentionnent pas d'hébergement garanti en Europe. Si un client l'exige, c'est une question à poser avant de charger ses documents.</td><td><a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">L'offre Team</a></td></tr>
+</table></div>
+<div class="attention"><b>Le bon réflexe, quelle que soit l'offre :</b> anonymisez le nom du client et les chiffres qui l'identifient quand ils ne sont pas nécessaires au travail, et relisez toujours un livrable avant de l'envoyer.</div>
+</section>
+
+<section id="m365">
+<h2>Le connecteur Microsoft 365</h2>
+<div class="tablewrap"><table>
+<tr><th>Point</th><th>Ce qu'il faut savoir</th></tr>
+<tr><td>Offres</td><td>Disponible sur toutes les offres, dont Team.</td></tr>
+<tr><td>Activation</td><td>Deux feux verts : un propriétaire de l'organisation Claude l'active dans les réglages, et un administrateur global Microsoft Entra donne une fois son consentement pour tout le tenant. Les comptes personnels Outlook ou Hotmail sont exclus.</td></tr>
+<tr><td>Ce que Claude lit</td><td>Mails et agenda Outlook, fichiers OneDrive, documents SharePoint, messages Teams, avec les droits de votre propre compte.</td></tr>
+<tr><td>Ce qu'il peut faire</td><td>Rédiger, envoyer, créer ou modifier seulement si l'administrateur l'a autorisé, et avec votre confirmation pour un envoi.</td></tr>
+<tr><td>Sécurité</td><td>Les contenus sont lus au moment de la question, sans être mis en cache. Les permissions SharePoint et les règles de protection des données de Microsoft 365 continuent de s'appliquer.</td></tr>
+</table></div>
+<p class="liens"><a href="https://support.claude.com/en/articles/12684923-microsoft-365-connector-security-guide">Guide de sécurité du connecteur Microsoft 365</a><a href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities">Les connecteurs</a></p>
+</section>
+
+<section id="ecologie">
+<h2>Et l'impact écologique ?</h2>
+<p>La question est légitime, surtout dans un cabinet RSE. Voici ce qui est mesuré, ce qui ne l'est pas, et ce que chacun peut faire.</p>
+<div class="tablewrap"><table>
+<tr><th>Ce qu'on sait</th><th>Le chiffre</th><th>Source</th></tr>
+<tr><td>Une requête texte médiane sur Gemini, mesurée par Google</td><td><b>0,24 Wh</b>, <b>0,03 g de CO2e</b>, <b>0,26 mL d'eau</b> (environ cinq gouttes). Selon Google, l'équivalent de moins de neuf secondes de télévision. Hors entraînement du modèle, réseau et appareil de l'utilisateur.</td><td><a href="https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference">Google, août 2025</a></td></tr>
+<tr><td>Une réponse de 400 tokens sur Le Chat, analyse de cycle de vie de Mistral</td><td><b>1,14 g de CO2e</b> et <b>45 mL d'eau</b>. L'entraînement pèse 85,5 % des émissions totales du modèle.</td><td><a href="https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai">Mistral, avec Carbone 4 et l'ADEME, juillet 2025</a></td></tr>
+<tr><td>Les centres de données dans le monde</td><td>Environ <b>1,5 %</b> de l'électricité mondiale en 2024 (415 TWh), une consommation appelée à plus que doubler d'ici 2030.</td><td><a href="https://www.iea.org/reports/energy-and-ai/executive-summary">Agence internationale de l'énergie</a></td></tr>
+<tr><td>Claude</td><td><b>Anthropic ne publie pas de chiffre par requête</b> à ce jour. Les chiffres qui circulent pour Claude sont des estimations de tiers, pas des mesures de l'éditeur.</td><td><a href="https://trust.anthropic.com/">Trust Center</a></td></tr>
+</table></div>
+<div class="attention"><b>Ne comparez pas Google et Mistral ligne à ligne.</b> Les périmètres diffèrent (entraînement inclus ou non, longueur de réponse, mix électrique) : l'écart entre les deux chiffres ne dit pas qu'un outil est plus sobre que l'autre.</div>
+<h3>Trois gestes de sobriété</h3>
+<ol class="etapes">
+<li><b>Le modèle le plus léger qui suffit.</b> Pour une reformulation ou un tri, inutile de choisir le modèle le plus puissant.</li>
+<li><b>Moins de régénérations.</b> Un prompt précis du premier coup coûte moins qu'une série d'essais. C'est aussi ce que font les skills.</li>
+<li><b>Grouper les demandes.</b> Une consigne complète vaut mieux que dix échanges courts.</li>
+</ol>
+<p class="small">Ces gestes découlent des méthodes de mesure publiées par Google et l'Agence internationale de l'énergie, qui les formulent pour les éditeurs et pas comme des consignes aux utilisateurs.</p>
+</section>
+
+<section id="liens">
+<h2>Liens utiles</h2>
+<h3>Aide officielle Claude</h3>
+<p class="liens">
+<a href="https://support.claude.com/en/articles/12512176-what-are-skills">Qu'est-ce qu'un skill</a>
+<a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Utiliser les skills</a>
+<a href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills">Créer un skill</a>
+<a href="https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization">Partager des skills à toute l'équipe</a>
+<a href="https://support.claude.com/en/articles/9517075-what-are-projects">Les projets</a>
+<a href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities">Les connecteurs</a>
+<a href="https://claude.com/connectors">L'annuaire des connecteurs</a>
+<a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork">Démarrer avec Cowork</a>
+<a href="https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork">Tâches programmées</a>
+<a href="https://support.claude.com/en/articles/11088861-use-research-on-claude">La recherche</a>
+</p>
+<h3>Se former gratuitement</h3>
+<p class="liens"><a href="https://anthropic.skilljar.com/">Anthropic Academy, cours gratuits avec certificat</a><a href="https://trust.anthropic.com/">Trust Center Anthropic</a></p>
+<h3>Vidéos</h3>
+<p class="liens">
+<a href="https://youtu.be/bjdBVZa66oU">What are skills? (chaîne Claude)</a>
+<a href="https://youtu.be/kS1MJFZWMq4">Creating custom Skills with Claude (chaîne Anthropic)</a>
+<a href="https://youtu.be/Lbml7IuGJYw">Getting started with Claude Cowork (chaîne Claude)</a>
+<a href="https://youtu.be/tYOI-WoLS_o">Delegate and schedule tasks in Claude Cowork (chaîne Claude)</a>
+<a href="https://youtu.be/GJ5jTgcbRHA">Getting started with projects</a>
+<a href="https://www.youtube.com/watch?v=O_z9vDLgvoY">Claude Skills Tutorial, Kevin Stratvert</a>
+<a href="https://www.youtube.com/watch?v=_nH1fc9HBSA">Claude Cowork Lightning Demo for Business Users, Allie K. Miller</a>
+</p>
+<h3>Rester en contact</h3>
+<p class="liens"><a href="https://www.linkedin.com/in/clement-predo">Clément Predo sur LinkedIn</a></p>
+</section>
+
+</main>
+<footer>Formateur : Clément Predo, Axem IA · <a href="https://www.linkedin.com/in/clement-predo">LinkedIn</a> · Organisme de formation : PKF Arsilon Academy</footer>
+</body>
+</html>
