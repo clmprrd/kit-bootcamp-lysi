@@ -1,0 +1,46 @@
+:root{
+  --corail:#DA7757;--corail-fonce:#B85A3C;--heros:#E97765;--creme:#F2E8D5;--cartouche:#FAF6EE;
+  --encre:#1A1A1A;--gris:#4A4A4A;--ligne:#E6DCCB;--sage:#9CAE8C;--sage-fond:#EDF2E8;--blanc:#fff;
+  --rayon:14px;--ombre:0 1px 2px rgba(26,26,26,.05),0 6px 20px rgba(26,26,26,.06)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cartouche);color:var(--encre);font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+a{color:var(--corail-fonce);text-underline-offset:3px}
+.hero{background:var(--encre);color:#fff;padding:36px 16px 30px}
+.hero .w{max-width:900px;margin:0 auto}
+.hero .sur{color:var(--heros);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin:0 0 6px}
+.hero h1{font-family:Fraunces,Georgia,serif;font-size:clamp(28px,5vw,42px);line-height:1.15;margin:0 0 10px}
+.hero p{margin:0;color:#DCD3C6;max-width:680px}
+nav.menu{position:sticky;top:0;z-index:10;background:var(--creme);border-bottom:1px solid var(--ligne);overflow-x:auto;white-space:nowrap;padding:10px 16px}
+nav.menu a{color:var(--encre);text-decoration:none;font-weight:600;font-size:14px;margin-right:16px}
+main{max-width:900px;margin:0 auto;padding:10px 16px 60px}
+section{background:var(--blanc);border:1px solid var(--ligne);border-radius:var(--rayon);box-shadow:var(--ombre);padding:22px 20px 14px;margin:22px 0;scroll-margin-top:60px}
+h2{font-family:Fraunces,Georgia,serif;font-size:26px;line-height:1.2;margin:0 0 6px}
+h3{font-size:18px;margin:20px 0 6px}
+.quand{display:inline-block;background:var(--corail);color:#fff;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:700;margin-bottom:8px}
+.module{display:inline-block;background:var(--creme);color:var(--encre);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700;margin:0 0 8px 6px}
+.faire{background:var(--sage-fond);border-left:4px solid var(--sage);border-radius:10px;padding:10px 14px;margin:10px 0 14px}
+.faire b:first-child{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:#4D6140;margin-bottom:2px}
+.attention{background:#FDEEE8;border-left:4px solid var(--corail);border-radius:10px;padding:10px 14px;margin:10px 0 14px}
+ol.etapes{counter-reset:e;list-style:none;padding:0;margin:8px 0 14px}
+ol.etapes>li{counter-increment:e;position:relative;padding:6px 0 6px 42px}
+ol.etapes>li:before{content:counter(e);position:absolute;left:0;top:6px;width:28px;height:28px;border-radius:50%;background:var(--encre);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 14px}
+th,td{border-bottom:1px solid var(--ligne);padding:8px 6px;text-align:left;vertical-align:top}
+th{background:var(--creme);font-size:14px}
+.tablewrap{overflow-x:auto}
+.prompt{position:relative;background:var(--cartouche);border:1px solid var(--ligne);border-left:4px solid var(--corail);border-radius:10px;padding:14px 14px 14px;margin:8px 0 16px;white-space:pre-wrap;font:14px/1.55 ui-monospace,Menlo,Consolas,monospace}
+.copy{position:absolute;top:8px;right:8px;background:var(--encre);color:#fff;border:0;border-radius:6px;padding:4px 10px;font:600 12px Inter,system-ui,sans-serif;cursor:pointer}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:10px 0 16px}
+.carte{border:1px solid var(--ligne);border-radius:12px;padding:12px 14px;background:var(--cartouche)}
+.carte h4{margin:0 0 4px;font-size:16px}
+.carte p{margin:0;font-size:15px}
+.carte .livre{display:block;margin-top:6px;font-size:13px;color:var(--gris)}
+.liens a{display:inline-block;margin:2px 10px 2px 0;font-size:15px}
+.btn{background:var(--corail);color:#fff;border:0;border-radius:10px;padding:10px 16px;font:700 15px Inter,system-ui,sans-serif;cursor:pointer}
+.tirage{font-size:18px;font-weight:700;min-height:28px;margin:8px 0}
+.compteur{font-family:Fraunces,Georgia,serif;font-size:34px;font-weight:800;letter-spacing:.02em}
+footer{text-align:center;color:var(--gris);font-size:14px;padding:24px 16px}
+@media (max-width:600px){body{font-size:16px}section{padding:18px 14px 10px}h2{font-size:22px}}
+@media print{nav.menu,.copy,.btn{display:none}section{box-shadow:none;break-inside:avoid}}
