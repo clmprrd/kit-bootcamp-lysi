@@ -12,154 +12,118 @@
 <body>
 <header class="hero"><div class="w">
 <p class="sur">Bootcamp IA Lysi · Jour 1 · jeudi 17 septembre</p>
-<h1>Aujourd'hui, vous vous armez</h1>
-<p>Le matin, on ouvre toute la boîte à outils de Claude. L'après-midi, vous l'appliquez à vos vrais livrables. Vous décidez de ce que vous construisez : ce kit vous donne les billes.</p>
+<h1>Fondamentaux et production de livrables</h1>
 </div></header>
 <nav class="menu">
-<a href="index.html">← Sommaire</a><a href="#programme">Programme</a><a href="#depart">9h00 Départ</a><a href="#briques">9h20 Les briques</a><a href="#slides">11h00 Slides</a><a href="#skill-slides">14h00 Votre skill</a><a href="#bibliotheque">16h00 Bibliothèque</a><a href="evaluation.html">Positionnement</a><a href="ressources.html">Sécurité et liens</a><a href="j2.html">Vendredi →</a>
+<a href="index.html">← Sommaire</a><a href="#s1">9h Briques</a><a href="#s2">10h Cas d'usage</a><a href="#s3">11h Slides</a><a href="#s4">14h Fiabiliser</a><a href="#s5">16h Bibliothèque</a><a href="ressources.html">Sécurité et liens</a><a href="j2.html">Vendredi →</a>
 </nav>
 <main>
 
-<section id="programme">
-<h2>Le programme de la journée</h2>
-<div class="tablewrap"><table>
-<tr><th>Horaire</th><th>Ce qui se passe</th><th>Vous repartez avec</th></tr>
-<tr><td>9h00 - 9h20</td><td>Émargement, questionnaire de départ, un tour de table en une phrase</td><td>La tâche que vous voulez régler d'ici vendredi</td></tr>
-<tr><td>9h20 - 11h00</td><td>Les briques de Claude, montrées en direct puis activées sur votre poste</td><td>Un skill, un projet et un connecteur qui marchent chez vous</td></tr>
-<tr><td>11h00 - 13h00</td><td>Un jeu de slides client sur un vrai dossier, de la matière brute au rendu</td><td>Un premier jeu de slides aux couleurs de Lysi</td></tr>
-<tr><td>13h00 - 14h00</td><td colspan="2">Déjeuner</td></tr>
-<tr><td>14h00 - 16h00</td><td>Ce qui a marché devient un skill, relu en binôme</td><td>Votre skill slides, testé par quelqu'un d'autre</td></tr>
-<tr><td>16h00 - 17h30</td><td>La bibliothèque commune de prompts et de skills</td><td>Au moins 3 fiches versées dans la bibliothèque de Lysi</td></tr>
-</table></div>
-<div class="attention"><b>Une règle pour les deux jours :</b> travaillez sur vos vrais dossiers, c'est ce qui rend le bootcamp utile. Pour les données sensibles d'un client, anonymisez le nom et les chiffres identifiants avant de les coller. La page <a href="ressources.html">Sécurité et liens</a> explique ce que Claude fait de vos données.</div>
-</section>
-
-<section id="depart">
-<span class="quand">9h00 · 20 min</span><span class="module">Module 1</span>
-<h2>Le départ</h2>
-<ol class="etapes">
-<li>Scannez le QR code d'émargement projeté par Clément et cliquez sur <b>Signer</b> sur votre ligne. Vous le referez à chaque demi-journée, matin et après-midi.</li>
-<li>Scannez <b>votre</b> QR code de questionnaire de départ, à votre nom, et répondez honnêtement : c'est ce qui mesure ce que vous aurez gagné vendredi.</li>
-<li>Tour de table, une phrase chacun : « la tâche qui me prend le plus de temps et que je veux avoir réglée vendredi, c'est… ». Notez-la, elle vous sert toute la journée.</li>
-</ol>
-</section>
-
-<section id="briques">
-<span class="quand">9h20 · 1 h 40</span><span class="module">Module 1</span>
+<section id="s1">
+<span class="quand">9h00 - 10h00</span><span class="module">Séquence 1</span>
 <h2>Les briques de Claude</h2>
-<div class="faire"><b>Ce que vous faites</b>Clément montre chaque brique en direct. Juste après chaque démonstration, vous l'activez sur votre poste. Partez toujours de la question, jamais de l'outil.</div>
 <div class="tablewrap"><table>
-<tr><th>La question que vous vous posez</th><th>La brique</th><th>Exemple chez Lysi</th></tr>
-<tr><td>« Je refais souvent la même chose, de la même façon »</td><td><b>Skill</b></td><td>Appliquer la charte Lysi à un jeu de slides</td></tr>
-<tr><td>« Claude doit connaître le contexte d'une mission »</td><td><b>Projet</b></td><td>Un projet par client, avec la lettre de mission et les livrables passés</td></tr>
-<tr><td>« Claude doit voir mes vrais outils »</td><td><b>Connecteur</b></td><td>Retrouver un mail ou un fichier d'une mission sans le chercher</td></tr>
-<tr><td>« Il y a plusieurs étapes, des fichiers, des recherches »</td><td><b>Cowork ou Recherche</b></td><td>Une note de veille sourcée sur une réglementation</td></tr>
-<tr><td>« Je veux que ça se fasse sans y penser »</td><td><b>Tâche programmée</b></td><td>Chaque lundi, un point sur les échéances des missions</td></tr>
+<tr><th>Brique</th><th>Sert à</th><th>Où</th><th>Aide</th></tr>
+<tr><td><b>Projet</b></td><td>Contexte permanent d'une mission : documents + instructions, repris dans chaque conversation du projet</td><td>Barre latérale › Projets › Nouveau</td><td><a href="https://support.claude.com/en/articles/9517075-what-are-projects">Aide</a></td></tr>
+<tr><td><b>Skill</b></td><td>Méthode écrite une fois (charte, trame, process), appliquée automatiquement quand la demande correspond</td><td>Paramètres › Capacités › activer « Exécution de code et création de fichiers », puis Personnaliser › Skills</td><td><a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Utiliser</a> · <a href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills">Créer</a></td></tr>
+<tr><td><b>Connecteur</b></td><td>Accès à vos outils (Outlook, OneDrive, SharePoint, Teams) avec vos propres droits ; confirmation demandée avant d'envoyer ou modifier</td><td>+ dans la zone de message › Connecteurs. Microsoft 365 : activé par l'admin Claude et l'admin Microsoft</td><td><a href="https://support.claude.com/en/articles/12684923-microsoft-365-connector-security-guide">Microsoft 365</a></td></tr>
+<tr><td><b>Recherche</b></td><td>Recherche en plusieurs passes sur le web et vos outils, rapport sourcé</td><td>+ › Recherche</td><td><a href="https://support.claude.com/en/articles/11088861-use-research-on-claude">Aide</a></td></tr>
+<tr><td><b>Cowork</b></td><td>Travail en plusieurs étapes sur vos fichiers (dossiers, synthèses, documents)</td><td>Application de bureau › Cowork</td><td><a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork">Aide</a></td></tr>
+<tr><td><b>Tâche programmée</b></td><td>Une consigne relancée à heure fixe</td><td>Cowork › Programmées › Nouvelle tâche</td><td><a href="https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork">Aide</a></td></tr>
 </table></div>
+<h3>Choisir la brique</h3>
+<div class="tablewrap"><table>
+<tr><td>Je refais la même chose de la même façon</td><td><b>Skill</b></td></tr>
+<tr><td>Claude doit connaître le contexte d'une mission</td><td><b>Projet</b></td></tr>
+<tr><td>Claude doit voir mes mails ou mes fichiers</td><td><b>Connecteur</b></td></tr>
+<tr><td>Plusieurs étapes, des fichiers, des sources</td><td><b>Cowork</b> ou <b>Recherche</b></td></tr>
+<tr><td>Ça doit tourner sans moi</td><td><b>Tâche programmée</b></td></tr>
+</table></div>
+<h3>À copier : instructions d'un projet mission</h3>
+<div class="prompt"><button class="copy">Copier</button>Client et contexte : [secteur, taille, enjeu]
+Interlocuteurs et attentes : [rôles, niveau de détail]
+Livrables et format : [slides, note, tableau]
+Ton Lysi : [factuel, chiffré, sans jargon]
+Interdits : [inventer un chiffre, citer un autre client]</div>
+</section>
 
-<h3>1 · Le skill</h3>
-<p>Un skill est un dossier d'instructions, et au besoin de fichiers modèles, que Claude charge de lui-même quand votre demande correspond. Vous l'écrivez une fois, il sert à chaque fois.</p>
+<section id="s2">
+<span class="quand">10h00 - 11h00</span><span class="module">Séquence 2</span>
+<h2>Votre cas d'usage prioritaire</h2>
+<div class="faire"><b>Atelier en petits groupes</b>Chacun formule 1 à 2 cas d'usage concrets. Restitution par groupe.</div>
+<div class="prompt"><button class="copy">Copier</button>Cas d'usage
+- Tâche actuelle : [quoi, avec quels documents]
+- Temps passé : [par mission ou par semaine]
+- Livrable attendu de Claude : [format exact]
+- À lui fournir : [documents, exemples, charte]
+- Brique : [skill, projet, connecteur, Cowork, tâche programmée]
+- Vérification : [comment je sais que c'est juste]</div>
+<div class="prompt"><button class="copy">Copier</button>Voici une tâche récurrente de mon métier de consultant : [tâche].
+Pose-moi d'abord les 5 questions qui te manquent pour la faire de façon fiable.
+Puis découpe-la en étapes : pour chacune, ce que tu fais et ce que je vérifie.</div>
+</section>
+
+<section id="s3">
+<span class="quand">11h00 - 13h00</span><span class="module">Séquence 3</span>
+<h2>Un jeu de slides client via un prompt structuré</h2>
+<div class="faire"><b>Pratique individuelle, cas réel</b>Livrable : 6 à 10 slides + le prompt qui les produit.</div>
+<h3>1 · Template et charte</h3>
+<div class="prompt"><button class="copy">Copier</button>Voici la charte du cabinet Lysi : [couleurs en hexadécimal, polices, logo, ton].
+Voici trois slides de référence : [joindre].
+Rédige une fiche charte d'une page : structure d'une slide type, titre = une conclusion, nombre de mots maximum, usage des couleurs, interdits.</div>
+<h3>2 · Trame</h3>
+<div class="prompt"><button class="copy">Copier</button>Mission : [client, enjeu, lecteurs des slides].
+Matière : [notes, chiffres, verbatims, documents joints].
+Construis la trame de [N] slides. Pour chacune : titre rédigé comme une conclusion, 3 preuves maximum, visuel conseillé.
+Signale tout chiffre absent de la matière au lieu de l'inventer.</div>
+<h3>3 · Production et relecture</h3>
+<div class="prompt"><button class="copy">Copier</button>Applique la fiche charte à la trame validée et produis le fichier PowerPoint.
+Avant de rendre, vérifie et corrige :
+1. chaque titre conclut ;
+2. une idée par slide ;
+3. chaque chiffre vient de la matière ;
+4. couleurs et polices conformes à la charte.</div>
+</section>
+
+<section id="s4">
+<span class="quand">14h00 - 16h00</span><span class="module">Séquence 4</span>
+<h2>Adapter et fiabiliser le rendu</h2>
+<div class="faire"><b>Binômes</b>Itérer sur les slides du matin, harmoniser la charte Lysi, transformer la méthode en skill.</div>
 <ol class="etapes">
-<li>Paramètres, puis Capacités : activez <b>Exécution de code et création de fichiers</b>. Sans cela, les skills ne fonctionnent pas.</li>
-<li>Personnaliser, puis Skills : activez un skill existant avec son interrupteur, par exemple celui qui crée des présentations PowerPoint.</li>
-<li>Pour créer le vôtre : cliquez sur +, puis Créer un skill. Le plus simple est de demander à Claude de l'écrire avec vous (prompt ci-dessous).</li>
+<li>Échanger les jeux de slides. Le relecteur note 3 défauts précis.</li>
+<li>Corriger le prompt, pas la slide.</li>
+<li>Transformer charte + trame + grille de relecture en skill (prompt ci-dessous).</li>
+<li>Tester le skill sur un autre dossier que celui du matin.</li>
 </ol>
 <div class="prompt"><button class="copy">Copier</button>Aide-moi à créer un skill Claude.
-La tâche que je refais souvent : [décrire la tâche, avec un exemple réel].
-Ce que je donne au départ : [documents, notes, données].
-Ce que je veux obtenir à la fin : [livrable, format exact].
-Comment je vérifie que c'est juste : [mon critère de relecture].
-Pose-moi d'abord les questions qui te manquent, une par une. Ensuite, rédige le skill complet et prépare le dossier à importer.</div>
-<p class="liens"><a href="https://support.claude.com/en/articles/12512176-what-are-skills">Aide : qu'est-ce qu'un skill</a><a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Aide : utiliser les skills</a><a href="https://youtu.be/bjdBVZa66oU">Vidéo : What are skills?</a><a href="https://youtu.be/kS1MJFZWMq4">Vidéo : Creating custom Skills</a></p>
-
-<h3>2 · Le projet</h3>
-<p>Un espace par mission ou par client, avec ses documents et ses consignes chargés une fois pour toutes. Toute conversation ouverte dedans part avec ce contexte.</p>
-<div class="faire"><b>À vous, 10 min</b>Créez un projet pour une mission en cours. Ajoutez 2 ou 3 documents (anonymisés si besoin) et écrivez les instructions ci-dessous.</div>
-<div class="prompt"><button class="copy">Copier</button>Instructions du projet
-- Client et contexte : [secteur, taille, enjeu de la mission]
-- Interlocuteurs et ce qu'ils attendent : [rôles, niveau de détail]
-- Livrables attendus et leur format : [slides, note, tableau]
-- Le ton Lysi : [ex. factuel, chiffré, sans jargon]
-- Ce qu'il ne faut jamais faire : [ex. inventer un chiffre, citer un autre client]</div>
-<p class="liens"><a href="https://support.claude.com/en/articles/9517075-what-are-projects">Aide : les projets</a><a href="https://youtu.be/GJ5jTgcbRHA">Vidéo : Getting started with projects</a></p>
-
-<h3>3 · Le connecteur</h3>
-<p>Un connecteur donne à Claude l'accès à votre messagerie, votre agenda ou vos fichiers, avec les droits de votre propre compte, rien de plus. Avant d'envoyer, de partager ou de supprimer, il vous demande votre accord.</p>
-<ol class="etapes">
-<li>Dans la zone de message, cliquez sur +, puis Connecteurs. Dans l'application de bureau : Personnaliser, puis Connecteurs.</li>
-<li>Choisissez l'outil (Microsoft 365, ou un autre de l'annuaire) et autorisez l'accès. Sur une offre Team, certains connecteurs doivent d'abord être activés par l'administrateur de Lysi.</li>
-<li>Testez avec une question qui ne fait que lire : « Retrouve le dernier échange avec [client] et résume ce qui est attendu de nous ».</li>
-</ol>
-<p class="liens"><a href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities">Aide : les connecteurs</a><a href="https://claude.com/connectors">L'annuaire des connecteurs</a></p>
-
-<h3>4 · Cowork, Recherche et tâches programmées</h3>
+Tâche : [description + un exemple réel].
+Entrées : [documents, notes, données].
+Sortie : [livrable, format exact].
+Contrôle : [critère de relecture].
+Pose-moi une par une les questions manquantes, puis rédige le skill complet et prépare le dossier à importer.</div>
+<h3>Grille de test d'un skill</h3>
 <div class="tablewrap"><table>
-<tr><th>Outil</th><th>Ce qu'il fait</th><th>Comment l'ouvrir</th></tr>
-<tr><td>Cowork</td><td>Prend en charge un travail de bureau en plusieurs étapes sur vos fichiers : dossiers, documents, synthèses</td><td>Dans l'application de bureau, choisissez Cowork. <a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork">Aide</a></td></tr>
-<tr><td>Recherche</td><td>Mène une recherche en plusieurs passes sur le web et vos outils connectés, et rend un rapport sourcé</td><td>+ en bas de la zone de message, puis Recherche. <a href="https://support.claude.com/en/articles/11088861-use-research-on-claude">Aide</a></td></tr>
-<tr><td>Tâche programmée</td><td>Refait une consigne à l'heure choisie, chaque jour ou chaque semaine</td><td>Dans Cowork : Programmées, puis Nouvelle tâche. <a href="https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork">Aide</a></td></tr>
+<tr><td>S'est-il déclenché seul ?</td><td>Sinon : la description ne reprend pas vos mots</td></tr>
+<tr><td>Le résultat est-il juste ?</td><td>Chiffres sourcés, titres qui concluent, charte</td></tr>
+<tr><td>Qu'a-t-il fallu reprendre à la main ?</td><td>Chaque reprise = une règle à ajouter au skill</td></tr>
 </table></div>
-<p class="liens"><a href="https://youtu.be/Lbml7IuGJYw">Vidéo : Getting started with Claude Cowork</a><a href="https://youtu.be/tYOI-WoLS_o">Vidéo : Delegate and schedule tasks in Cowork</a></p>
-<div class="faire"><b>À vous, 10 min</b>Lancez une Recherche sur un sujet d'une mission en cours, par exemple une évolution réglementaire qui touche un client. Lisez les sources qu'elle cite : c'est là que se juge la fiabilité.</div>
 </section>
 
-<section id="slides">
-<span class="quand">11h00 · 2 h</span><span class="module">Module 2</span>
-<h2>Un jeu de slides client, sur un vrai dossier</h2>
-<div class="faire"><b>Ce que vous faites</b>Clément montre le chemin complet en direct. Ensuite chacun prend un vrai dossier (une note, des verbatims d'entretien, un tableau de chiffres) et produit un jeu de 6 à 10 slides. Les trois prompts sont un point de départ : modifiez-les.</div>
-<h3>Étape 1 · Poser la charte une fois</h3>
-<div class="prompt"><button class="copy">Copier</button>Tu es le directeur artistique du cabinet Lysi. Voici notre charte : [couleurs avec codes hexadécimaux, polices, logo, ton].
-Voici trois de nos slides que nous jugeons réussies : [joindre].
-Rédige une fiche charte d'une page que tu appliqueras à tout jeu de slides : structure d'une slide type, règle des titres (un titre = un message), nombre de mots maximum, usage des couleurs, ce qui est interdit.</div>
-<h3>Étape 2 · De la matière brute à la trame</h3>
-<div class="prompt"><button class="copy">Copier</button>Contexte de la mission : [client, enjeu, qui lira les slides].
-Matière brute : [notes, chiffres, verbatims, documents joints].
-Construis la trame d'un jeu de [N] slides. Pour chaque slide : le titre rédigé comme une conclusion, 3 éléments de preuve au maximum, et le visuel conseillé.
-Signale chaque chiffre que tu ne trouves pas dans la matière fournie, au lieu de l'inventer.</div>
-<h3>Étape 3 · Produire et se relire</h3>
-<div class="prompt"><button class="copy">Copier</button>Applique la fiche charte Lysi à la trame validée et produis le fichier PowerPoint.
-Avant de me rendre la main, relis-toi avec cette grille et corrige :
-1. Chaque titre est-il une phrase qui conclut ?
-2. Une seule idée par slide ?
-3. Chaque chiffre vient-il de la matière fournie ?
-4. Couleurs et polices respectent-elles la charte ?</div>
-<div class="attention"><b>Le réflexe qui compte :</b> quand une slide est fausse, corrigez le prompt, pas la slide à la main. C'est le prompt qui deviendra le skill cet après-midi.</div>
-</section>
-
-<section id="skill-slides">
-<span class="quand">14h00 · 2 h</span><span class="module">Module 2</span>
-<h2>Ce qui a marché devient un skill</h2>
-<ol class="etapes">
-<li><b>14h00, 45 min.</b> Avec le prompt de création de skill (plus haut), transformez votre méthode du matin en skill : charte, trame, grille de relecture. Joignez vos slides réussies comme exemples.</li>
-<li><b>14h45, 15 min.</b> Testez-le sur un <b>autre</b> dossier que celui du matin. Un skill qui ne marche que sur son exemple ne compte pas.</li>
-<li><b>15h00, 40 min.</b> En binôme : chacun fait tourner le skill de l'autre sur son propre dossier. Le relecteur note trois défauts précis, l'auteur corrige le skill.</li>
-<li><b>15h40, 20 min.</b> Deux binômes montrent à la salle ce qui a changé entre la première et la deuxième version.</li>
-</ol>
-<div class="grille">
-<div class="carte"><h4>Le skill s'est-il déclenché seul ?</h4><p>Sinon, la description du skill ne reprend pas les mots que vous employez vraiment.</p></div>
-<div class="carte"><h4>Le résultat est-il juste ?</h4><p>Chiffres sourcés, titres qui concluent, charte respectée.</p></div>
-<div class="carte"><h4>Qu'a-t-il fallu reprendre à la main ?</h4><p>Chaque reprise manuelle est une règle à ajouter au skill.</p></div>
-</div>
-</section>
-
-<section id="bibliotheque">
-<span class="quand">16h00 · 1 h 30</span><span class="module">Module 3</span>
-<h2>La bibliothèque commune de Lysi</h2>
-<div class="faire"><b>Ce que vous faites</b>Chacun verse au moins 3 fiches : ses meilleurs prompts et son skill de la journée. On retire les doublons, on range par usage, et à 17h15 chacun lit à voix haute le seul champ « critère de succès » d'une de ses fiches.</div>
-<div class="prompt"><button class="copy">Copier</button>Fiche Lysi
-- Titre : [verbe + objet, ex. « Rédiger la trame d'un copil »]
-- Version et date :
-- Type : prompt ou skill
-- Cas d'usage : [dans quelle situation de mission]
-- Ce qu'il faut joindre : [documents, charte, exemples]
-- Le prompt, ou le lien du skill : [texte complet, zones à remplir entre crochets]
-- Critère de succès : [à quoi voit-on que le résultat est bon ?]
-- Auteur :</div>
-<p>Le critère de succès est le champ que tout le monde oublie, et il est obligatoire : sans lui, impossible de savoir s'il faut corriger le prompt ou relancer.</p>
-<div class="prompt"><button class="copy">Copier</button>Voici [N] fiches rédigées par différents consultants du cabinet.
-Regroupe celles qui servent le même usage, propose pour chaque groupe une version fusionnée qui garde le meilleur de chacune, au format de la fiche Lysi, et signale les fiches dont le critère de succès est vague.</div>
-<p><b>Où la ranger :</b> un projet Claude « Bibliothèque Lysi » partagé avec toute l'équipe, ou le dossier commun de votre SharePoint. À décider ensemble avant 17h30.</p>
-<p>17h25 : émargement de fin de journée.</p>
+<section id="s5">
+<span class="quand">16h00 - 17h30</span><span class="module">Séquence 5</span>
+<h2>La bibliothèque de prompts Lysi</h2>
+<div class="faire"><b>Travail collectif</b>Formaliser les prompts efficaces de la journée, au même format, rangés par usage.</div>
+<div class="prompt"><button class="copy">Copier</button>Titre : [verbe + objet]
+Version et date :
+Type : prompt ou skill
+Cas d'usage : [situation de mission]
+À joindre : [documents, charte, exemples]
+Prompt ou lien du skill : [texte complet, zones à remplir entre crochets]
+Critère de succès : [à quoi voit-on que le résultat est bon]
+Auteur :</div>
+<div class="prompt"><button class="copy">Copier</button>Voici [N] fiches de consultants du cabinet.
+Regroupe celles qui servent le même usage, propose une version fusionnée par groupe au format de la fiche, et signale les critères de succès trop vagues.</div>
+<p>Stockage : un projet Claude « Bibliothèque Lysi » partagé, ou le dossier commun SharePoint. L'administrateur peut partager un skill à toute l'équipe (<a href="https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization">aide</a>).</p>
 </section>
 
 </main>
