@@ -12,153 +12,133 @@
 <body>
 <header class="hero"><div class="w">
 <p class="sur">Bootcamp IA Lysi · Jour 2 · vendredi 18 septembre</p>
-<h1>Aujourd'hui, vous construisez vos outils</h1>
-<p>Le matin, chacun construit un skill en duo et le montre à la salle. L'après-midi, toute l'équipe crée ensemble un outil interne pour Lysi. C'est vous qui choisissez les sujets.</p>
+<h1>Automatisation métier et autonomie</h1>
 </div></header>
 <nav class="menu">
-<a href="index.html">← Sommaire</a><a href="#programme">Programme</a><a href="#duo">9h15 Skill en duo</a><a href="#tableau">11h30 Au tableau</a><a href="#libre">14h00 Atelier libre</a><a href="#plan">16h20 Plan d'action</a><a href="ressources.html">Sécurité et liens</a><a href="j1.html">← Jeudi</a>
+<a href="index.html">← Sommaire</a><a href="#s6">9h Anatomie d'un skill</a><a href="#s7">10h Skill bilan carbone</a><a href="#s8">14h Tests croisés</a><a href="#s9">16h Plan d'action</a><a href="#s10">17h Clôture</a><a href="ressources.html">Sécurité et liens</a><a href="j1.html">← Jeudi</a>
 </nav>
 <main>
 
-<section id="programme">
-<h2>Le programme de la journée</h2>
+<section id="s6">
+<span class="quand">9h00 - 10h00</span><span class="module">Séquence 6</span>
+<h2>Anatomie d'un skill ou d'un agent</h2>
 <div class="tablewrap"><table>
-<tr><th>Horaire</th><th>Ce qui se passe</th><th>Vous repartez avec</th></tr>
-<tr><td>9h00 - 9h15</td><td>Émargement par QR code, formation des duos</td><td>Votre binôme</td></tr>
-<tr><td>9h15 - 11h30</td><td>La création du skill en duo : une idée commune, puis chacun sa version</td><td>Un skill qui tourne sur votre vrai travail</td></tr>
-<tr><td>11h30 - 13h00</td><td>Le passage au tableau : chaque duo montre ses skills en direct</td><td>Les idées des autres, à reprendre</td></tr>
-<tr><td>13h00 - 14h00</td><td colspan="2">Déjeuner</td></tr>
-<tr><td>14h00 - 16h00</td><td>L'atelier libre : toute l'équipe construit un outil interne pour Lysi</td><td>Un outil qui marche, pitché à 16h00</td></tr>
-<tr><td>16h00 - 17h30</td><td>Pitch, plans d'action individuels, évaluation finale</td><td>Votre plan à 30 jours</td></tr>
+<tr><th>Élément</th><th>Rôle</th></tr>
+<tr><td><b>Nom + description</b></td><td>Déclenchent le skill : écrire les mots que le consultant emploie vraiment</td></tr>
+<tr><td><b>Entrées</b></td><td>Fichiers et données attendus, avec leur format</td></tr>
+<tr><td><b>Étapes</b></td><td>Ce que Claude fait, dans l'ordre</td></tr>
+<tr><td><b>Sortie</b></td><td>Livrable exact : colonnes, sections, format de fichier</td></tr>
+<tr><td><b>Règles</b></td><td>Ce qui est interdit (inventer un facteur d'émission, une source)</td></tr>
+<tr><td><b>Contrôles</b></td><td>Vérifications avant de rendre (totaux, sources citées)</td></tr>
+<tr><td><b>Exemple</b></td><td>Un cas réel avec le résultat attendu</td></tr>
+<tr><td><b>Connecteur</b> (option)</td><td>Pour lire les données là où elles sont (SharePoint, OneDrive, Outlook)</td></tr>
+</table></div>
+<div class="tablewrap"><table>
+<tr><th>Skill</th><th>Agent (Cowork)</th></tr>
+<tr><td>Une méthode appliquée à la demande, dans la conversation</td><td>Plusieurs étapes enchaînées en autonomie sur des fichiers, avec un résultat rendu à la fin</td></tr>
 </table></div>
 </section>
 
-<section id="duo">
-<span class="quand">9h15 · 2 h 15</span><span class="module">Module 4</span>
-<h2>La création du skill en duo</h2>
-<div class="faire"><b>Ce que vous faites</b>En duo, trouvez une même idée de skill. Ensuite chacun construit sa propre version, adaptée à ses missions. Les deux skills seront différents, c'est voulu : au tableau, on compare.</div>
-<ol class="etapes">
-<li><b>9h15.</b> Formez un duo avec quelqu'un qui ne fait pas les mêmes missions que vous. En nombre impair, un trio.</li>
-<li><b>9h20, 15 min.</b> Brainstormez et trouvez une idée commune. Pour trancher, répondez ensemble :
-<br>· Quelle tâche revient souvent chez vous deux, même sous une forme différente ?
-<br>· Qu'est-ce qui la déclenche, chez l'un et chez l'autre ?
-<br>· Qu'est-ce que chacun donne au skill au départ ?
-<br>· Qu'est-ce que chacun doit obtenir à la fin ?
-<br>· Comment chacun vérifie que le résultat est juste ?</li>
-<li><b>9h35, 1 h 30.</b> Chacun construit sa version avec le prompt de création de skill (<a href="j1.html#briques">page de jeudi</a>). Branchez-y un projet ou un connecteur si c'est utile.</li>
-<li><b>11h05, 25 min.</b> Testez-le pour de vrai, sur un cas que vous n'avez pas utilisé pour l'écrire. Un skill qui ne tourne pas en direct ne compte pas. Gardez un exemple d'entrée prêt pour la démonstration.</li>
-</ol>
-<h3>Des idées pour démarrer, si vous en manquez</h3>
-<div class="grille">
-<div class="carte"><h4>Bilan carbone</h4><p>Transformer les données brutes envoyées par un client en tableau normalisé, poste par poste, avec la liste de ce qui manque.</p></div>
-<div class="carte"><h4>Facteurs d'émission</h4><p>Relire un calcul et signaler chaque facteur sans source ou incohérent, sans jamais en inventer un.</p></div>
-<div class="carte"><h4>Copil</h4><p>Préparer la trame d'un comité de pilotage à partir des notes et de l'avancement de la mission.</p></div>
-<div class="carte"><h4>Compte rendu</h4><p>Transformer une transcription Fathom en décisions, responsables et échéances, au format Lysi.</p></div>
-<div class="carte"><h4>Proposition commerciale</h4><p>Passer d'un brief client et d'un appel découverte à une proposition structurée dans le ton du cabinet.</p></div>
-<div class="carte"><h4>Veille</h4><p>Une note d'une page sur une évolution réglementaire, avec ses sources et ce qu'elle change pour un client donné.</p></div>
-<div class="carte"><h4>Questionnaire RSE</h4><p>Préparer les réponses d'un client à un questionnaire d'évaluation à partir de ses documents.</p></div>
-<div class="carte"><h4>Avant un rendez-vous</h4><p>Une fiche client d'une page : activité, actualité publique, enjeux RSE probables, questions à poser.</p></div>
-</div>
-<div class="attention"><b>Données :</b> travaillez sur vos vrais dossiers, en anonymisant le nom du client et les chiffres qui l'identifient. Voir <a href="ressources.html#securite">ce que Claude fait de vos données</a>.</div>
+<section id="s7">
+<span class="quand">10h00 - 13h00</span><span class="module">Séquence 7</span>
+<h2>Prototype de skill sur une étape du bilan carbone</h2>
+<div class="faire"><b>Petits groupes, cas réel</b>Livrable de groupe : un skill qui tourne, présenté à 14h. L'étape est choisie par le groupe.</div>
+<h3>1 · Cartographier et choisir l'étape (10h00 - 10h45)</h3>
+<div class="prompt"><button class="copy">Copier</button>Voici notre méthode de bilan carbone, étape par étape : [décrire ou joindre].
+Pour chaque étape : données d'entrée, traitement, livrable, temps passé, risque d'erreur si automatisée (faible, moyen, élevé).
+Recommande l'étape la plus rentable à automatiser en premier et explique pourquoi.</div>
+<p>Étapes souvent retenues : normaliser les données brutes d'un client poste par poste ; contrôler les facteurs d'émission cités ; produire la synthèse d'un poste ; préparer les demandes de données manquantes.</p>
+<h3>2 · Écrire le skill (10h45 - 12h15)</h3>
+<div class="prompt"><button class="copy">Copier</button>---
+name: [nom-court-de-l-etape]
+description: [Quand l'utiliser, avec les mots du consultant]
+---
+
+# [Étape du bilan carbone]
+
+## Entrées
+- [fichiers ou données, format]
+
+## Étapes
+1. [étape]
+2. [étape]
+3. [étape]
+
+## Sortie
+- [livrable, format exact]
+
+## Règles
+- Ne jamais inventer un facteur d'émission : le signaler s'il manque.
+- Citer la source de chaque facteur utilisé.
+- [règle métier Lysi]
+
+## Contrôles avant de rendre
+- [ex. total égal à la somme des postes]
+
+## Exemple
+- Entrée : [cas réel anonymisé]
+- Sortie attendue : [résultat connu]</div>
+<h3>3 · Tester sur un cas dont le résultat est connu (12h15 - 13h00)</h3>
+<p>Un skill qui ne tourne pas en direct ne compte pas. Garder une entrée prête pour 14h.</p>
 </section>
 
-<section id="tableau">
-<span class="quand">11h30 · 1 h 30</span><span class="module">Module 4</span>
-<h2>Le passage au tableau</h2>
-<div class="faire"><b>Ce que vous faites</b>Chaque duo passe ensemble, environ 15 minutes. Le duo suivant observe et répond aux questions à voix haute.</div>
+<section id="s8">
+<span class="quand">14h00 - 16h00</span><span class="module">Séquence 8</span>
+<h2>Tests croisés et fiabilisation</h2>
+<h3>1 · Présentation et test croisé (14h00 - 15h00)</h3>
 <ol class="etapes">
-<li><b>5 min, personne 1.</b> Montrez comment vous avez construit votre skill, faites-le tourner en direct, et dites où il s'insère dans vos missions. Citez un point de vigilance : les données, ou ce qu'il faut toujours relire.</li>
-<li><b>5 min, personne 2.</b> Pareil avec votre version, puis dites ce qui la différencie de celle de votre binôme.</li>
-<li><b>3 min.</b> Coaching de Clément.</li>
-<li><b>2 min, le duo observateur répond :</b> les deux skills ont-ils marché en direct ? Qu'est-ce qui change entre les deux versions ? Une amélioration concrète pour chacun.</li>
+<li>Chaque groupe montre son skill en direct : construction, démo, où il s'insère dans la méthode (5 min).</li>
+<li>Un autre groupe le fait tourner sur <b>son</b> cas (5 min).</li>
+<li>Le groupe testeur répond : déclenché seul ? résultat juste ? qu'a-t-il fallu reprendre à la main ?</li>
 </ol>
-<p>Tout le reste de la salle note une idée à reprendre. Les meilleurs skills rejoignent la bibliothèque de Lysi : l'administrateur de l'offre Team peut les rendre disponibles à toute l'équipe (<a href="https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization">aide officielle</a>).</p>
-</section>
-
-<section id="libre">
-<span class="quand">14h00 · 2 h</span><span class="module">Module 4</span>
-<h2>L'atelier libre</h2>
-<div class="faire"><b>Ce que vous faites</b>Une équipe, un sujet, un outil interne pour Lysi. Pas de thème imposé : vous choisissez, vous vous organisez, et à 16h00 vous montrez quelque chose qui marche. Clément observe, vous pilotez.</div>
-<p class="compteur" id="compteur">--:--:--</p>
-<p>avant le pitch de 16h00</p>
-
-<h3>Le déroulé, cinq temps</h3>
+<h3>2 · Itération collective (15h00 - 16h00)</h3>
+<div class="faire"><b>Toute l'équipe</b>Un sujet voté, des rôles, une contrainte tirée au sort. Objectif : un outil interne Lysi qui fonctionne à 16h00.</div>
 <div class="tablewrap"><table>
-<tr><td><b>14h00</b></td><td><b>Le sujet.</b> Tour de table express, chacun dit son idée en une phrase. Vote à main levée, deux voix chacun.</td></tr>
-<tr><td><b>14h10</b></td><td><b>Les rôles.</b> On nomme le décideur. Il répartit les rôles, puis on tire une contrainte.</td></tr>
-<tr><td><b>14h20</b></td><td><b>On construit.</b> 80 minutes, point d'étape de 5 minutes à 14h55.</td></tr>
-<tr><td><b>15h40</b></td><td><b>Stop.</b> Plus aucun ajout. Les testeurs passent, les pitcheurs répètent.</td></tr>
-<tr><td><b>16h00</b></td><td><b>Le pitch.</b> 5 minutes, puis chacun dit ce qu'il a apporté.</td></tr>
+<tr><th>Rôle</th><th>Livre</th></tr>
+<tr><td>Décideur</td><td>Répartit les rôles, tranche en 2 minutes</td></tr>
+<tr><td>Créateurs</td><td>La solution qui marche</td></tr>
+<tr><td>Testeurs</td><td>Les défauts trouvés avant 15h45</td></tr>
+<tr><td>Pitcheurs</td><td>La démo de 5 minutes</td></tr>
+<tr><td>Gardien du temps</td><td>Stop à 15h50</td></tr>
 </table></div>
-
-<h3>Les rôles, personne ne regarde les autres faire</h3>
 <div class="grille">
-<div class="carte"><h4>Le décideur</h4><p>Choisi en premier. Répartit les rôles selon les forces de chacun, tranche quand l'équipe hésite.</p><span class="livre">Il porte les arbitrages</span></div>
-<div class="carte"><h4>Les créateurs</h4><p>Construisent la solution avec les skills, projets et connecteurs de leur choix.</p><span class="livre">Ils livrent la solution qui marche</span></div>
-<div class="carte"><h4>Les testeurs</h4><p>L'utilisent comme un vrai consultant, cherchent ce qui coince et le renvoient avant 15h40.</p><span class="livre">Ils livrent les défauts corrigés</span></div>
-<div class="carte"><h4>Les pitcheurs</h4><p>Suivent le travail depuis le début et préparent 5 minutes : le problème, la solution, la démonstration.</p><span class="livre">Ils livrent le pitch</span></div>
-<div class="carte"><h4>Le gardien du temps</h4><p>Annonce chaque étape, lance le point de 14h55 et le stop de 15h40.</p><span class="livre">Il livre une équipe à l'heure</span></div>
+<div class="carte"><h4>Sujet</h4><p class="tirage" id="defi"></p><button class="btn" id="btn-defi">Tirer un sujet</button></div>
+<div class="carte"><h4>Contrainte</h4><p class="tirage" id="contrainte"></p><button class="btn" id="btn-contrainte">Tirer une contrainte</button></div>
 </div>
-
-<h3>Le tirage</h3>
-<p>Le défi donne un sujet si la salle hésite. La contrainte se tire une fois le sujet choisi, et elle est obligatoire.</p>
-<div class="grille">
-<div class="carte"><h4>Le défi</h4><p>Aucun sujet ne s'impose ?</p><p class="tirage" id="defi"></p><button class="btn" id="btn-defi">Tirer un défi</button></div>
-<div class="carte"><h4>La contrainte</h4><p>Elle s'ajoute au sujet, sans négociation.</p><p class="tirage" id="contrainte"></p><button class="btn" id="btn-contrainte">Tirer une contrainte</button></div>
-</div>
-
-<h3>Huit sujets pour vous lancer</h3>
-<div class="grille">
-<div class="carte"><h4>La charte IA de Lysi</h4><p>Ce qu'on a le droit de faire, ce qui est interdit, qui valide. Lisible en deux minutes.</p><span class="livre">À 16h00 : la charte et 3 cas tranchés</span></div>
-<div class="carte"><h4>Le kit du nouvel arrivant</h4><p>Tout ce qu'une nouvelle recrue doit savoir pour utiliser Claude chez Lysi dès son premier jour.</p><span class="livre">À 16h00 : testé par quelqu'un qui ne l'a pas écrit</span></div>
-<div class="carte"><h4>L'offre IA de Lysi</h4><p>Ce que Lysi pourrait proposer à ses clients : pour qui, quoi, en combien d'étapes.</p><span class="livre">À 16h00 : le pitch face à un « client »</span></div>
-<div class="carte"><h4>Le client sceptique</h4><p>Un dirigeant qui doute : l'IA est-elle compatible avec une démarche RSE ? L'équipe prépare l'argumentaire, les testeurs jouent le client.</p><span class="livre">À 16h00 : la scène jouée</span></div>
-<div class="carte"><h4>Le tableau de bord des missions</h4><p>Chaque lundi, l'état des missions, les échéances et les relances, à partir des mails et de l'agenda.</p><span class="livre">À 16h00 : le résultat sur une vraie semaine</span></div>
-<div class="carte"><h4>La bibliothèque rangée</h4><p>Tous les skills et prompts des deux jours, triés, documentés, prêts à partager à l'équipe.</p><span class="livre">À 16h00 : la bibliothèque en ligne</span></div>
-<div class="carte"><h4>Le bilan carbone accéléré</h4><p>Enchaîner plusieurs skills du matin sur une étape complète de la méthode Lysi.</p><span class="livre">À 16h00 : l'étape déroulée sur un cas</span></div>
-<div class="carte"><h4>Le guide anti-hallucination</h4><p>Reconnaître un chiffre ou une source inventés, et les vérifier. En affiche.</p><span class="livre">À 16h00 : l'affiche et un piège démontré</span></div>
-</div>
-
-<h3>Le pitch, ce que la salle regarde</h3>
-<ol class="etapes">
-<li><b>Ça sert vraiment :</b> quelqu'un de la salle s'en servirait dès lundi.</li>
-<li><b>Ça marche :</b> on voit la solution tourner, pas une promesse.</li>
-<li><b>C'est clair :</b> compris du premier coup par ceux qui ne l'ont pas construite.</li>
-<li><b>Tout le monde a joué :</b> chaque rôle sait dire ce qu'il a apporté.</li>
-</ol>
-<div class="attention"><b>Les règles d'or.</b> Tout le monde joue : rien à faire ? Dites-le au décideur. Petit mais fini : une solution modeste qui marche bat un grand projet à moitié fait. Le décideur tranche : deux minutes de débat, puis on avance.</div>
+<p>Identifier aussi les limites : ce que le skill ne doit jamais faire seul, ce qui reste à vérifier à la main.</p>
 </section>
 
-<section id="plan">
-<span class="quand">16h20 · 1 h 10</span><span class="module">Module 5</span>
-<h2>Votre plan d'action, puis l'évaluation</h2>
+<section id="s9">
+<span class="quand">16h00 - 17h00</span><span class="module">Séquence 9</span>
+<h2>Plan d'action individuel</h2>
+<div class="faire"><b>Présentation individuelle, 3 à 5 minutes</b>Retours entre pairs.</div>
+<div class="prompt"><button class="copy">Copier</button>Mon plan d'action Claude, 30 jours
+1. Dès lundi : [skill ou fiche de la bibliothèque]
+2. Sur ma mission en cours : [pour quel livrable]
+3. Temps gagné visé : [par semaine]
+4. Ajout à la bibliothèque commune : [skill ou fiche]
+5. Blocage possible et à qui je le demande :</div>
+</section>
+
+<section id="s10">
+<span class="quand">17h00 - 17h30</span><span class="module">Séquence 10</span>
+<h2>Clôture</h2>
 <ol class="etapes">
-<li><b>16h20, 5 min.</b> Remplissez votre plan avec le modèle ci-dessous.</li>
-<li><b>16h25, 30 min.</b> Chacun le présente en 3 minutes. La salle retient un engagement par personne.</li>
-<li><b>16h55, 10 min.</b> Scannez <b>votre</b> QR code d'évaluation de la formation, à votre nom.</li>
-<li><b>17h25.</b> Dernier émargement.</li>
+<li>Questionnaire individuel : positionnement avant/après et retours à chaud (QR code à votre nom).</li>
+<li>Émargement de fin de journée.</li>
+<li>Assistance par mail pendant 30 jours : clem.pred@gmail.com.</li>
 </ol>
-<div class="prompt"><button class="copy">Copier</button>Mon plan d'action Claude, 30 prochains jours
-1. Ce que j'utilise dès lundi : [un skill ou une fiche de la bibliothèque]
-2. Ce que je déploie sur ma mission en cours : [pour quel livrable]
-3. Le temps que je compte gagner : [par semaine]
-4. Ce que j'ajoute à la bibliothèque commune : [skill ou fiche]
-5. Ce qui pourrait me bloquer, et à qui je le demande :</div>
-<p>Après la formation, vous avez trente jours d'assistance par mail auprès de Clément sur ce que vous avez lancé ici.</p>
 </section>
 
 </main>
 <footer>Formateur : Clément Predo, Axem IA · <a href="https://www.linkedin.com/in/clement-predo">LinkedIn</a> · Organisme de formation : PKF Arsilon Academy</footer>
 <script>
 document.addEventListener("click",function(e){var t=e.target;if(!t.classList.contains("copy"))return;var txt=t.parentElement.innerText.replace(/^Copier\s*/,"");navigator.clipboard.writeText(txt).then(function(){t.textContent="Copié";setTimeout(function(){t.textContent="Copier"},1500)})});
-var DEFIS=["La charte IA de Lysi","Le kit du nouvel arrivant","L'offre IA de Lysi","Le client sceptique","Le tableau de bord des missions","La bibliothèque rangée","Le bilan carbone accéléré","Le guide anti-hallucination"];
-var CONTRAINTES=["Il doit utiliser au moins un skill créé pendant le bootcamp","Un stagiaire doit pouvoir s'en servir lundi sans explication","Le livrable tient en une page","Chaque chiffre et chaque affirmation citent leur source","Il passe par un connecteur Microsoft 365","Sobriété : une seule conversation, aucune régénération","Il est présenté par quelqu'un qui ne l'a pas construit","Zéro donnée client réelle, tout est fictif ou anonymisé"];
-function tire(arr,id){document.getElementById(id).textContent=arr[Math.floor(Math.random()*arr.length)]}
+var DEFIS=["La charte IA de Lysi en une page","Le kit du nouvel arrivant Lysi","L'offre IA de Lysi pour ses clients","L'argumentaire face à un client sceptique (IA et RSE)","Le point hebdo des missions via Microsoft 365","La bibliothèque Lysi rangée et documentée","Deux skills bilan carbone enchaînés sur une étape complète","Le guide anti-chiffre inventé"];
+var CONTRAINTES=["Utiliser au moins un skill créé ce matin","Utilisable par un stagiaire lundi sans explication","Le livrable tient en une page","Chaque chiffre cite sa source","Passer par un connecteur Microsoft 365","Sobriété : une seule conversation, aucune régénération","Présenté par quelqu'un qui ne l'a pas construit","Zéro donnée client réelle"];
+function tire(a,id){document.getElementById(id).textContent=a[Math.floor(Math.random()*a.length)]}
 document.getElementById("btn-defi").onclick=function(){tire(DEFIS,"defi")};
 document.getElementById("btn-contrainte").onclick=function(){tire(CONTRAINTES,"contrainte")};
-var cible=new Date("2026-09-18T16:00:00+02:00").getTime();
-function maj(){var d=cible-Date.now(),el=document.getElementById("compteur");if(d<=0){el.textContent="C'est l'heure du pitch";return}var h=Math.floor(d/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);el.textContent=(h>48?Math.floor(h/24)+" j ":"")+String(h>48?h%24:h).padStart(2,"0")+":"+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0")}
-maj();setInterval(maj,1000);
 </script>
 </body>
 </html>
