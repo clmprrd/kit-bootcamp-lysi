@@ -13,42 +13,94 @@
 <header class="hero"><div class="w">
 <p class="sur">Bootcamp IA Lysi · Jour 2 · vendredi 18 septembre</p>
 <h1>Automatisation métier et autonomie</h1>
+<p>Le contenu s'ajuste à vos demandes au fil de la journée. Ce kit reste la référence : consignes, textes à copier, liens.</p>
 </div></header>
 <nav class="menu">
-<a href="index.html">← Sommaire</a><a href="#s6">9h Anatomie d'un skill</a><a href="#s7">10h Skill bilan carbone</a><a href="#s8">14h Tests croisés</a><a href="#s9">16h Plan d'action</a><a href="#s10">17h Clôture</a><a href="ressources.html">Sécurité et liens</a><a href="j1.html">← Jeudi</a>
+<a href="index.html">← Sommaire</a><a href="#programme">Programme</a><a href="#s6">9h Anatomie d'un skill</a><a href="#s7">10h Atelier skill bilan carbone</a><a href="#s8">14h Atelier tests croisés</a><a href="#s9">16h Plan d'action</a><a href="#s10">17h Clôture</a><a href="ressources.html">Sécurité et liens</a><a href="j1.html">← Jeudi</a>
 </nav>
 <main>
+
+<section id="programme">
+<h2>Le programme de la journée</h2>
+<div class="tablewrap"><table>
+<tr><th>Horaire</th><th>Séquence</th><th>Format</th></tr>
+<tr><td>9h00 - 10h00</td><td>6 · Anatomie d'un skill ou d'un agent, connecteurs</td><td>Démonstration, questions</td></tr>
+<tr><td>10h00 - 13h00</td><td>7 · Atelier : un skill sur une étape du bilan carbone</td><td>Petits groupes, cas réel, consignes pas à pas</td></tr>
+<tr><td>14h00 - 16h00</td><td>8 · Atelier : tests croisés, itération collective, limites</td><td>Groupes puis toute l'équipe, consignes pas à pas</td></tr>
+<tr><td>16h00 - 17h00</td><td>9 · Plan d'action individuel</td><td>Présentation de 3 à 5 minutes chacun</td></tr>
+<tr><td>17h00 - 17h30</td><td>10 · Clôture et questionnaire</td><td>Individuel</td></tr>
+</table></div>
+</section>
 
 <section id="s6">
 <span class="quand">9h00 - 10h00</span><span class="module">Séquence 6</span>
 <h2>Anatomie d'un skill ou d'un agent</h2>
+<div class="faire"><b>Ce que vous faites</b>Clément ouvre un skill réel et montre chaque partie, puis le fait tourner. Vous suivez avec ce tableau : c'est la structure que vous remplirez à 10h.</div>
+<h3>Les 8 parties d'un skill</h3>
 <div class="tablewrap"><table>
-<tr><th>Élément</th><th>Rôle</th></tr>
-<tr><td><b>Nom + description</b></td><td>Déclenchent le skill : écrire les mots que le consultant emploie vraiment</td></tr>
-<tr><td><b>Entrées</b></td><td>Fichiers et données attendus, avec leur format</td></tr>
-<tr><td><b>Étapes</b></td><td>Ce que Claude fait, dans l'ordre</td></tr>
-<tr><td><b>Sortie</b></td><td>Livrable exact : colonnes, sections, format de fichier</td></tr>
-<tr><td><b>Règles</b></td><td>Ce qui est interdit (inventer un facteur d'émission, une source)</td></tr>
-<tr><td><b>Contrôles</b></td><td>Vérifications avant de rendre (totaux, sources citées)</td></tr>
-<tr><td><b>Exemple</b></td><td>Un cas réel avec le résultat attendu</td></tr>
-<tr><td><b>Connecteur</b> (option)</td><td>Pour lire les données là où elles sont (SharePoint, OneDrive, Outlook)</td></tr>
+<tr><th>Partie</th><th>Rôle</th><th>Exemple bilan carbone</th></tr>
+<tr><td><b>Nom</b></td><td>Identifiant court</td><td>normaliser-donnees-client</td></tr>
+<tr><td><b>Description</b></td><td>Déclenche le skill : elle reprend les mots que le consultant emploie</td><td>« Quand je reçois les données brutes d'un client pour son bilan carbone »</td></tr>
+<tr><td><b>Entrées</b></td><td>Fichiers et données attendus, avec leur format</td><td>Export Excel des consommations, factures d'énergie</td></tr>
+<tr><td><b>Étapes</b></td><td>Ce que Claude fait, dans l'ordre</td><td>Lire, classer par poste, convertir les unités, lister les manques</td></tr>
+<tr><td><b>Sortie</b></td><td>Le livrable exact</td><td>Tableau poste par poste + liste des données manquantes</td></tr>
+<tr><td><b>Règles</b></td><td>Ce qui est interdit</td><td>Ne jamais inventer un facteur d'émission ni une donnée</td></tr>
+<tr><td><b>Contrôles</b></td><td>Vérifications avant de rendre</td><td>Unités cohérentes, totaux égaux à la somme des lignes</td></tr>
+<tr><td><b>Exemple</b></td><td>Un cas réel avec le résultat attendu</td><td>Les données d'un bilan déjà réalisé et validé</td></tr>
 </table></div>
+<h3>Skill, agent ou tâche programmée</h3>
 <div class="tablewrap"><table>
-<tr><th>Skill</th><th>Agent (Cowork)</th></tr>
-<tr><td>Une méthode appliquée à la demande, dans la conversation</td><td>Plusieurs étapes enchaînées en autonomie sur des fichiers, avec un résultat rendu à la fin</td></tr>
+<tr><th></th><th>Skill</th><th>Agent (Cowork)</th><th>Tâche programmée</th></tr>
+<tr><td>Quand</td><td>Vous lancez une demande, Claude applique la méthode</td><td>Plusieurs étapes enchaînées sur des fichiers, en autonomie</td><td>Une consigne relancée à heure fixe</td></tr>
+<tr><td>Exemple</td><td>Normaliser les données d'un client</td><td>Traiter un dossier complet de données et rendre une synthèse</td><td>Chaque lundi, relancer les données manquantes</td></tr>
 </table></div>
+<h3>Les connecteurs dans un skill</h3>
+<p>Un skill peut aller chercher les données là où elles sont : un dossier SharePoint client, une pièce jointe Outlook, un fichier OneDrive. Il faut que le connecteur Microsoft 365 soit activé pour votre compte (voir jeudi, séquence 1). Claude demande confirmation avant toute écriture ou envoi.</p>
+<p class="liens"><a href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills">Aide : créer un skill</a><a href="https://support.claude.com/en/articles/12684923-microsoft-365-connector-security-guide">Connecteur Microsoft 365</a><a href="https://youtu.be/kS1MJFZWMq4">Vidéo : Creating custom Skills with Claude</a></p>
 </section>
 
 <section id="s7">
 <span class="quand">10h00 - 13h00</span><span class="module">Séquence 7</span>
-<h2>Prototype de skill sur une étape du bilan carbone</h2>
-<div class="faire"><b>Petits groupes, cas réel</b>Livrable de groupe : un skill qui tourne, présenté à 14h. L'étape est choisie par le groupe.</div>
-<h3>1 · Cartographier et choisir l'étape (10h00 - 10h45)</h3>
+<h2>Atelier : un skill sur une étape du bilan carbone</h2>
+<div class="faire"><b>Ce que vous faites</b>Par groupes de 2 ou 3, vous choisissez une étape de votre méthode de bilan carbone, vous écrivez le skill qui l'automatise, et vous le faites tourner sur un vrai cas. Le groupe choisit son étape.</div>
+<div class="guide">
+<div><b>Durée</b>3 h</div>
+<div><b>Format</b>Groupes de 2 ou 3</div>
+<div><b>Livrable</b>1 skill qui tourne, présenté à 14h</div>
+</div>
+<h3>Consignes, à suivre dans l'ordre</h3>
+<ol class="etapes">
+<li><b>10h00, 5 min.</b> Formez les groupes : mélangez les profils (associés, consultants, stagiaire).</li>
+<li><b>10h05, 30 min.</b> Cartographiez la méthode avec le prompt 1. Choisissez <b>une</b> étape : répétitive, bien documentée, dont on sait vérifier le résultat.</li>
+<li><b>10h35, 10 min.</b> Préparez un cas de test : les données d'un bilan déjà réalisé, dont vous connaissez le bon résultat.</li>
+<li><b>10h45, 60 min.</b> Écrivez le skill avec le prompt 2 et le modèle. Importez-le (Personnaliser › Skills).</li>
+<li><b>11h45, 30 min.</b> Faites-le tourner sur le cas de test. Comparez au résultat connu. Chaque écart devient une règle ou un contrôle dans le skill.</li>
+<li><b>12h15, 30 min.</b> Deuxième passage sur un autre cas. Notez ce qui reste à vérifier à la main.</li>
+<li><b>12h45, 15 min.</b> Préparez la démo de 14h : une entrée prête, le résultat attendu, les limites.</li>
+</ol>
+<h3>Prompt 1 · Cartographier la méthode</h3>
 <div class="prompt"><button class="copy">Copier</button>Voici notre méthode de bilan carbone, étape par étape : [décrire ou joindre].
-Pour chaque étape : données d'entrée, traitement, livrable, temps passé, risque d'erreur si automatisée (faible, moyen, élevé).
-Recommande l'étape la plus rentable à automatiser en premier et explique pourquoi.</div>
-<p>Étapes souvent retenues : normaliser les données brutes d'un client poste par poste ; contrôler les facteurs d'émission cités ; produire la synthèse d'un poste ; préparer les demandes de données manquantes.</p>
-<h3>2 · Écrire le skill (10h45 - 12h15)</h3>
+Pour chaque étape, indique :
+- les données d'entrée ;
+- le traitement réalisé ;
+- le livrable produit ;
+- le temps passé estimé ;
+- le risque d'erreur si on l'automatise (faible, moyen, élevé).
+Recommande l'étape la plus rentable à automatiser en premier, et explique pourquoi.</div>
+<h3>Étapes souvent retenues</h3>
+<div class="grille">
+<div class="carte"><h4>Normaliser les données reçues</h4><p>Classer les données brutes du client par poste d'émission, convertir les unités, lister les manques.</p></div>
+<div class="carte"><h4>Contrôler les facteurs d'émission</h4><p>Relire un calcul et signaler chaque facteur sans source, périmé ou incohérent.</p></div>
+<div class="carte"><h4>Demander les données manquantes</h4><p>Rédiger la demande au client, poste par poste, avec le format attendu.</p></div>
+<div class="carte"><h4>Synthétiser un poste</h4><p>Produire la synthèse d'un poste d'émission pour le rapport ou les slides du client.</p></div>
+</div>
+<h3>Prompt 2 · Écrire le skill</h3>
+<div class="prompt"><button class="copy">Copier</button>Aide-moi à créer un skill Claude pour cette étape de notre bilan carbone : [étape choisie].
+Voici ce que nous recevons en entrée : [format, exemple anonymisé].
+Voici ce que nous voulons en sortie : [livrable, format exact].
+Voici les règles métier à respecter : [règles].
+Pose-moi une par une les questions qui manquent, puis rédige le skill complet selon le modèle ci-dessous et prépare le dossier à importer.</div>
+<h3>Modèle de skill</h3>
 <div class="prompt"><button class="copy">Copier</button>---
 name: [nom-court-de-l-etape]
 description: [Quand l'utiliser, avec les mots du consultant]
@@ -57,7 +109,7 @@ description: [Quand l'utiliser, avec les mots du consultant]
 # [Étape du bilan carbone]
 
 ## Entrées
-- [fichiers ou données, format]
+- [fichiers ou données attendus, format]
 
 ## Étapes
 1. [étape]
@@ -73,72 +125,109 @@ description: [Quand l'utiliser, avec les mots du consultant]
 - [règle métier Lysi]
 
 ## Contrôles avant de rendre
-- [ex. total égal à la somme des postes]
+- [ex. unités cohérentes, total égal à la somme des postes]
 
 ## Exemple
 - Entrée : [cas réel anonymisé]
 - Sortie attendue : [résultat connu]</div>
-<h3>3 · Tester sur un cas dont le résultat est connu (12h15 - 13h00)</h3>
-<p>Un skill qui ne tourne pas en direct ne compte pas. Garder une entrée prête pour 14h.</p>
+<div class="piege"><b>Piège :</b> viser toute la méthode d'un coup. Un skill qui fait bien une étape vaut mieux qu'un skill qui fait mal cinq étapes.</div>
+<div class="reussi"><b>Réussi si</b> le skill tourne en direct sur un cas dont vous connaissez le résultat, et vous savez dire ce qu'il ne faut jamais lui confier sans vérification.</div>
 </section>
 
 <section id="s8">
 <span class="quand">14h00 - 16h00</span><span class="module">Séquence 8</span>
-<h2>Tests croisés et fiabilisation</h2>
-<h3>1 · Présentation et test croisé (14h00 - 15h00)</h3>
+<h2>Atelier : tests croisés et itération collective</h2>
+<div class="faire"><b>Ce que vous faites</b>D'abord, chaque groupe fait tourner le skill d'un autre groupe sur son propre cas. Ensuite, toute l'équipe construit ensemble un outil interne pour Lysi, avec des rôles et une contrainte.</div>
+
+<h3>Partie 1 · Tests croisés (14h00 - 15h00)</h3>
 <ol class="etapes">
-<li>Chaque groupe montre son skill en direct : construction, démo, où il s'insère dans la méthode (5 min).</li>
-<li>Un autre groupe le fait tourner sur <b>son</b> cas (5 min).</li>
-<li>Le groupe testeur répond : déclenché seul ? résultat juste ? qu'a-t-il fallu reprendre à la main ?</li>
+<li><b>5 min par groupe.</b> Le groupe montre son skill : l'étape choisie, la démo en direct, ses limites.</li>
+<li><b>5 min.</b> Le groupe suivant fait tourner ce skill sur <b>son</b> cas, sans aide.</li>
+<li><b>3 min.</b> Le groupe testeur répond à voix haute aux 3 questions ci-dessous.</li>
+<li><b>2 min.</b> Clément donne une amélioration concrète. Le groupe auteur la note.</li>
 </ol>
-<h3>2 · Itération collective (15h00 - 16h00)</h3>
-<div class="faire"><b>Toute l'équipe</b>Un sujet voté, des rôles, une contrainte tirée au sort. Objectif : un outil interne Lysi qui fonctionne à 16h00.</div>
 <div class="tablewrap"><table>
-<tr><th>Rôle</th><th>Livre</th></tr>
-<tr><td>Décideur</td><td>Répartit les rôles, tranche en 2 minutes</td></tr>
-<tr><td>Créateurs</td><td>La solution qui marche</td></tr>
-<tr><td>Testeurs</td><td>Les défauts trouvés avant 15h45</td></tr>
-<tr><td>Pitcheurs</td><td>La démo de 5 minutes</td></tr>
-<tr><td>Gardien du temps</td><td>Stop à 15h50</td></tr>
+<tr><th>Question du groupe testeur</th><th>Ce qu'on corrige si non</th></tr>
+<tr><td>Le skill s'est-il déclenché sans être nommé ?</td><td>La description</td></tr>
+<tr><td>Le résultat est-il juste sur notre cas ?</td><td>Une règle ou un contrôle</td></tr>
+<tr><td>Qu'a-t-il fallu reprendre à la main ?</td><td>Une étape à ajouter, ou une limite à écrire</td></tr>
+</table></div>
+
+<h3>Partie 2 · Itération collective (15h00 - 16h00)</h3>
+<p class="compteur" id="compteur">--:--:--</p>
+<p class="small">avant la démo de 16h00</p>
+<div class="tablewrap"><table>
+<tr><th>Heure</th><th>Étape</th></tr>
+<tr><td><b>15h00</b></td><td><b>Le sujet.</b> Chacun propose un outil interne en une phrase. Vote à main levée, deux voix chacun. Pas d'accord : tirez un sujet.</td></tr>
+<tr><td><b>15h05</b></td><td><b>Les rôles.</b> On nomme le décideur, qui répartit les autres rôles. Puis on tire une contrainte, obligatoire.</td></tr>
+<tr><td><b>15h10</b></td><td><b>On construit.</b> 35 minutes. Point d'étape de 3 minutes à 15h25.</td></tr>
+<tr><td><b>15h45</b></td><td><b>Stop.</b> Plus aucun ajout. Les testeurs passent, les pitcheurs répètent.</td></tr>
+<tr><td><b>15h55</b></td><td><b>La démo.</b> 5 minutes devant la salle.</td></tr>
+</table></div>
+<h3>Les rôles</h3>
+<div class="tablewrap"><table>
+<tr><th>Rôle</th><th>Ce qu'il fait</th><th>Ce qu'il livre</th></tr>
+<tr><td><b>Décideur</b></td><td>Répartit les rôles selon les forces de chacun, tranche après 2 minutes de débat</td><td>Les arbitrages</td></tr>
+<tr><td><b>Créateurs</b></td><td>Construisent avec les skills, projets et connecteurs de leur choix</td><td>La solution qui marche</td></tr>
+<tr><td><b>Testeurs</b></td><td>L'utilisent comme un vrai consultant et renvoient les défauts avant 15h45</td><td>Les défauts corrigés</td></tr>
+<tr><td><b>Pitcheurs</b></td><td>Suivent le travail depuis le début, préparent : le problème, la solution, la démo</td><td>La démo de 5 minutes</td></tr>
+<tr><td><b>Gardien du temps</b></td><td>Annonce chaque étape, lance le point de 15h25 et le stop de 15h45</td><td>Une équipe à l'heure</td></tr>
 </table></div>
 <div class="grille">
-<div class="carte"><h4>Sujet</h4><p class="tirage" id="defi"></p><button class="btn" id="btn-defi">Tirer un sujet</button></div>
-<div class="carte"><h4>Contrainte</h4><p class="tirage" id="contrainte"></p><button class="btn" id="btn-contrainte">Tirer une contrainte</button></div>
+<div class="carte"><h4>Tirer un sujet</h4><p class="tirage" id="defi"></p><button class="btn" id="btn-defi">Tirer un sujet</button></div>
+<div class="carte"><h4>Tirer la contrainte</h4><p class="tirage" id="contrainte"></p><button class="btn" id="btn-contrainte">Tirer une contrainte</button></div>
 </div>
-<p>Identifier aussi les limites : ce que le skill ne doit jamais faire seul, ce qui reste à vérifier à la main.</p>
+<h3>Ce que la salle regarde à la démo</h3>
+<div class="tablewrap"><table>
+<tr><td><b>Ça sert</b></td><td>Quelqu'un de Lysi s'en sert dès lundi</td></tr>
+<tr><td><b>Ça marche</b></td><td>On le voit tourner, pas une promesse</td></tr>
+<tr><td><b>C'est clair</b></td><td>Compris par ceux qui ne l'ont pas construit</td></tr>
+<tr><td><b>Tout le monde a joué</b></td><td>Chaque rôle dit ce qu'il a apporté</td></tr>
+</table></div>
+<div class="piege"><b>Règles :</b> tout le monde a un rôle. Petit mais fini : une solution modeste qui marche bat un grand projet à moitié fait. Le décideur tranche après 2 minutes. Aucune donnée client réelle.</div>
 </section>
 
 <section id="s9">
 <span class="quand">16h00 - 17h00</span><span class="module">Séquence 9</span>
 <h2>Plan d'action individuel</h2>
-<div class="faire"><b>Présentation individuelle, 3 à 5 minutes</b>Retours entre pairs.</div>
+<div class="faire"><b>Ce que vous faites</b>Vous formalisez ce que vous mettez en place dans les 30 prochains jours, puis vous le présentez en 3 à 5 minutes.</div>
+<ol class="etapes">
+<li><b>16h00, 10 min.</b> Remplissez le plan ci-dessous.</li>
+<li><b>16h10, 45 min.</b> Chacun présente son plan. Les autres donnent un retour : ce qui est réaliste, ce qui manque.</li>
+<li><b>16h55, 5 min.</b> Chacun note l'engagement qu'il retient d'un collègue.</li>
+</ol>
 <div class="prompt"><button class="copy">Copier</button>Mon plan d'action Claude, 30 jours
-1. Dès lundi : [skill ou fiche de la bibliothèque]
-2. Sur ma mission en cours : [pour quel livrable]
-3. Temps gagné visé : [par semaine]
-4. Ajout à la bibliothèque commune : [skill ou fiche]
-5. Blocage possible et à qui je le demande :</div>
+1. Ce que j'utilise dès lundi : [skill ou fiche de la bibliothèque]
+2. Ce que je déploie sur ma mission en cours : [pour quel livrable]
+3. Le temps que je compte gagner : [par semaine]
+4. Ce que j'ajoute à la bibliothèque commune : [skill ou fiche]
+5. Ce qui pourrait me bloquer, et à qui je le demande :</div>
+<div class="reussi"><b>Réussi si</b> chaque plan cite un outil précis, un livrable réel et une date.</div>
 </section>
 
 <section id="s10">
 <span class="quand">17h00 - 17h30</span><span class="module">Séquence 10</span>
 <h2>Clôture</h2>
 <ol class="etapes">
-<li>Questionnaire individuel : positionnement avant/après et retours à chaud (QR code à votre nom).</li>
+<li>Scannez <b>votre</b> QR code de questionnaire : positionnement avant/après et retours sur la formation (10 min).</li>
+<li>Questions ouvertes.</li>
 <li>Émargement de fin de journée.</li>
-<li>Assistance par mail pendant 30 jours : clem.pred@gmail.com.</li>
 </ol>
+<p>Après la formation : assistance par mail pendant 30 jours, clem.pred@gmail.com.</p>
 </section>
 
 </main>
 <footer>Formateur : Clément Predo, Axem IA · <a href="https://www.linkedin.com/in/clement-predo">LinkedIn</a> · Organisme de formation : PKF Arsilon Academy</footer>
 <script>
 document.addEventListener("click",function(e){var t=e.target;if(!t.classList.contains("copy"))return;var txt=t.parentElement.innerText.replace(/^Copier\s*/,"");navigator.clipboard.writeText(txt).then(function(){t.textContent="Copié";setTimeout(function(){t.textContent="Copier"},1500)})});
-var DEFIS=["La charte IA de Lysi en une page","Le kit du nouvel arrivant Lysi","L'offre IA de Lysi pour ses clients","L'argumentaire face à un client sceptique (IA et RSE)","Le point hebdo des missions via Microsoft 365","La bibliothèque Lysi rangée et documentée","Deux skills bilan carbone enchaînés sur une étape complète","Le guide anti-chiffre inventé"];
-var CONTRAINTES=["Utiliser au moins un skill créé ce matin","Utilisable par un stagiaire lundi sans explication","Le livrable tient en une page","Chaque chiffre cite sa source","Passer par un connecteur Microsoft 365","Sobriété : une seule conversation, aucune régénération","Présenté par quelqu'un qui ne l'a pas construit","Zéro donnée client réelle"];
+var DEFIS=["La charte IA de Lysi en une page","Le kit du nouvel arrivant Lysi","L'offre IA de Lysi pour ses clients","L'argumentaire face à un client sceptique : IA et démarche RSE","Le point hebdomadaire des missions via Microsoft 365","La bibliothèque Lysi rangée et documentée","Deux skills bilan carbone enchaînés sur une étape complète","Le guide anti-chiffre inventé"];
+var CONTRAINTES=["Utiliser au moins un skill créé aujourd'hui","Utilisable par un stagiaire lundi sans explication","Le livrable tient en une page","Chaque chiffre cite sa source","Passer par le connecteur Microsoft 365","Sobriété : une seule conversation, aucune régénération","Présenté par quelqu'un qui ne l'a pas construit","Zéro donnée client réelle"];
 function tire(a,id){document.getElementById(id).textContent=a[Math.floor(Math.random()*a.length)]}
 document.getElementById("btn-defi").onclick=function(){tire(DEFIS,"defi")};
 document.getElementById("btn-contrainte").onclick=function(){tire(CONTRAINTES,"contrainte")};
+var cible=new Date("2026-09-18T15:55:00+02:00").getTime();
+function maj(){var d=cible-Date.now(),el=document.getElementById("compteur");if(d<=0){el.textContent="C'est l'heure de la démo";return}var h=Math.floor(d/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);el.textContent=(h>48?Math.floor(h/24)+" j ":"")+String(h>48?h%24:h).padStart(2,"0")+":"+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0")}
+maj();setInterval(maj,1000);
 </script>
 </body>
 </html>
