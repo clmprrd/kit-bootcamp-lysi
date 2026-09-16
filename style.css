@@ -44,3 +44,12 @@ th{background:var(--creme);font-size:14px}
 footer{text-align:center;color:var(--gris);font-size:14px;padding:24px 16px}
 @media (max-width:600px){body{font-size:16px}section{padding:18px 14px 10px}h2{font-size:22px}}
 @media print{nav.menu,.copy,.btn{display:none}section{box-shadow:none;break-inside:avoid}}
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:10px 0 14px}
+.guide div{background:var(--cartouche);border:1px solid var(--ligne);border-radius:10px;padding:8px 12px;font-size:15px}
+.guide b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--gris)}
+.piege{background:#FDEEE8;border-left:4px solid var(--corail);border-radius:10px;padding:10px 14px;margin:10px 0}
+.reussi{background:var(--sage-fond);border-left:4px solid var(--sage);border-radius:10px;padding:10px 14px;margin:10px 0 16px}
+.brique{border:1px solid var(--ligne);border-radius:12px;padding:14px 16px;margin:14px 0;background:var(--blanc)}
+.brique h3{margin-top:0}
+.route{border:1px dashed var(--ligne);border-radius:10px;padding:10px 14px;margin:8px 0}
+.small{font-size:14px;color:var(--gris)}
