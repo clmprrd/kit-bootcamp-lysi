@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Positionnement et évaluation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>.q{padding:10px 0;border-bottom:1px solid var(--ligne)}.q label{display:inline-block;margin:4px 12px 0 0;font-size:15px}input[type=text],textarea{width:100%;padding:8px;border:1px solid var(--ligne);border-radius:8px;font:inherit}textarea{min-height:70px}.small{font-size:14px;color:var(--gris)}</style>
+</head>
+<body>
+<header class="hero"><div class="w">
+<p class="sur">Bootcamp IA Lysi</p>
+<h1>Positionnement et évaluation</h1>
+<p>Le même questionnaire au départ, jeudi à 9h, et à l'arrivée, vendredi à 17h. C'est ce qui mesure ce que vous avez gagné. Cinq minutes, individuel.</p>
+</div></header>
+<nav class="menu"><a href="index.html">← Sommaire</a><a href="#avant">Jeudi 9h : départ</a><a href="#apres">Vendredi 17h : arrivée</a></nav>
+<main>
+<section id="avant"><span class="quand">Jeudi 9h00</span><h2>Questionnaire de départ</h2><div id="form-avant"></div></section>
+<section id="apres"><span class="quand">Vendredi 16h55</span><h2>Questionnaire d'arrivée et avis sur la formation</h2><div id="form-apres"></div></section>
+</main>
+<footer>Formateur : Clément Predo, Axem IA · Organisme de formation : PKF Arsilon Academy</footer>
+<script>
+const AFFIRMATIONS=[
+"Je sais quelle fonctionnalité de Claude utiliser (projet, connecteur, skill, Cowork) selon la tâche.",
+"Je sais formuler un cas d'usage concret de Claude sur mes missions.",
+"Je sais écrire un prompt structuré qui produit un livrable réutilisable.",
+"Je sais produire un jeu de slides aux couleurs de Lysi avec Claude.",
+"Je sais vérifier et corriger un livrable produit par l'IA avant de l'envoyer.",
+"Je sais concevoir et tester un skill Claude appliqué à un process métier.",
+"Je sais utiliser et enrichir une bibliothèque de prompts partagée."
+];
+const ECHELLE=["1 Pas du tout","2 Un peu","3 Plutôt oui","4 Tout à fait"];
+function buildForm(id,moment){
+  const box=document.getElementById(id);
+  let h='<div class="q"><b>Nom et prénom</b><input type="text" id="'+id+'-nom"></div>';
+  AFFIRMATIONS.forEach((a,i)=>{
+    h+='<div class="q">'+(i+1)+'. '+a+'<br>';
+    ECHELLE.forEach((e,j)=>{h+='<label><input type="radio" name="'+id+'-'+i+'" value="'+(j+1)+'"> '+e+'</label>';});
+    h+='</div>';
+  });
+  if(moment==="APRES"){
+    h+='<div class="q">Note globale de la formation, sur 10<input type="text" id="'+id+'-note"></div>';
+    h+='<div class="q">Ce qui vous a été le plus utile<textarea id="'+id+'-utile"></textarea></div>';
+    h+='<div class="q">Ce qu\'il faudrait améliorer<textarea id="'+id+'-amelio"></textarea></div>';
+  }
+  h+='<button class="btn" data-id="'+id+'" data-moment="'+moment+'">Envoyer mes réponses</button><p class="small">Le bouton ouvre votre messagerie avec vos réponses déjà rédigées : il ne reste qu\'à cliquer sur Envoyer.</p>';
+  box.innerHTML=h;
+}
+buildForm("form-avant","AVANT");
+buildForm("form-apres","APRES");
+document.addEventListener("click",e=>{
+  const t=e.target;
+  if(t.classList.contains("btn")&&t.dataset.id){
+    const id=t.dataset.id, m=t.dataset.moment;
+    const nom=document.getElementById(id+"-nom").value.trim();
+    if(!nom){alert("Indiquez votre nom et prénom.");return;}
+    let body="Bootcamp IA Lysi, 17-18/09/2026, positionnement "+(m==="AVANT"?"de départ":"final")+"\nParticipant : "+nom+"\n\n";
+    AFFIRMATIONS.forEach((a,i)=>{
+      const r=document.querySelector('input[name="'+id+'-'+i+'"]:checked');
+      body+=(i+1)+". "+a+" : "+(r?r.value+"/4":"sans réponse")+"\n";
+    });
+    if(m==="APRES"){
+      body+="\nNote globale : "+document.getElementById(id+"-note").value+"/10\nLe plus utile : "+document.getElementById(id+"-utile").value+"\nÀ améliorer : "+document.getElementById(id+"-amelio").value+"\n";
+    }
+    location.href="mailto:clem.pred@gmail.com?subject="+encodeURIComponent("Bootcamp Lysi - positionnement "+m+" - "+nom)+"&body="+encodeURIComponent(body);
+  }
+});
+</script>
+</body>
+</html>
