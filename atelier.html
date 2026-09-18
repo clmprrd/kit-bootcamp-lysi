@@ -15,178 +15,173 @@
 .barre .chrono{font-family:Fraunces,Georgia,serif;font-size:30px;font-weight:800;min-width:92px}
 .barre .quoi{font-weight:700;line-height:1.3}
 .barre .apres{font-size:13px;color:#DCD3C6}
-.frise{display:flex;gap:4px;margin:14px 0 4px}
-.frise span{flex:1;height:8px;border-radius:4px;background:var(--ligne)}
-.frise span.fait{background:var(--sage)}
-.frise span.actif{background:var(--corail)}
-.regle{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:6px 0 4px}
-.regle div{background:var(--cartouche);border:1px solid var(--ligne);border-radius:12px;padding:10px 14px;font-size:15px}
-.regle b{display:block;font-size:16px}
-details.phase{border:1px solid var(--ligne);border-radius:var(--rayon);background:var(--blanc);box-shadow:var(--ombre);margin:12px 0;overflow:hidden}
-details.phase summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 18px}
-details.phase summary::-webkit-details-marker{display:none}
-.num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--encre);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
-.titre{flex:1}
-.titre b{display:block;font-size:18px}
-.titre span{font-size:14px;color:var(--gris)}
-details.phase.actif{border:2px solid var(--corail)}
-details.phase.actif .num{background:var(--corail)}
-details.phase.fini{opacity:.6}
-details.phase.fini .num{background:var(--sage)}
-.corps{padding:0 18px 14px}
-.tous{background:var(--sage-fond);border-left:4px solid var(--sage);border-radius:10px;padding:10px 14px;margin:0 0 10px}
-.tous b:first-child{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#4D6140}
-ul.qui{list-style:none;padding:0;margin:0}
-ul.qui li{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--ligne);font-size:15px}
-ul.qui li:last-child{border-bottom:0}
-.tag{flex:none;width:150px;font-weight:700;font-size:14px}
-.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
-.roles div{border:1px solid var(--ligne);border-radius:10px;padding:8px 12px;background:var(--cartouche);font-size:14px}
-.roles b{display:block;font-size:15px}
-.etoile{color:var(--corail-fonce)}
-@media (max-width:600px){.tag{width:110px}.barre .chrono{font-size:24px;min-width:74px}}
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:8px 0 4px}
+.phases div{border:1px solid var(--ligne);border-radius:12px;padding:10px 12px;background:var(--cartouche);font-size:14px}
+.phases b{display:block;font-size:15px}
+.phases .h{font-size:12px;font-weight:700;color:var(--gris)}
+.phases div.actif{border:2px solid var(--corail);background:#FDEEE8}
+.phases div.fini{opacity:.5}
+.role{border:1px solid var(--ligne);border-radius:var(--rayon);background:var(--blanc);box-shadow:var(--ombre);padding:16px 18px;margin:12px 0}
+.role h3{margin:0;font-size:20px}
+.role .nb{display:inline-block;background:var(--creme);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;margin:4px 0 6px}
+.role .nb.oblig{background:var(--corail);color:#fff}
+.role .mission{font-size:16px;margin:4px 0 8px}
+.role ul{margin:0 0 8px;padding-left:20px}
+.role li{margin:3px 0;font-size:15px}
+.role .livre{background:var(--sage-fond);border-left:4px solid var(--sage);border-radius:8px;padding:6px 12px;font-size:15px}
+.fam{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);margin:26px 0 0}
+@media (max-width:600px){.barre .chrono{font-size:24px;min-width:74px}}
 </style>
 </head>
 <body>
 <header class="hero"><div class="w">
 <p class="sur">Bootcamp IA Lysi · vendredi 18 septembre · 14h00 - 17h00</p>
 <h1>L'atelier : un outil pour Lysi, construit en équipe</h1>
-<p>Vous êtes autonomes. Chaque phase dit qui fait quoi. La phase en cours s'ouvre toute seule.</p>
+<p>Vous choisissez ensemble quoi construire, chacun prend un rôle, et à 16h40 vous montrez un outil qui marche.</p>
 </div></header>
 <div class="barre"><div class="w"><div class="chrono" id="chrono">--:--</div><div><div class="quoi" id="quoi">…</div><div class="apres" id="apres"></div></div></div></div>
 <main>
 
 <section>
-<div class="regle">
-<div><b>1 · Vous choisissez le sujet</b>Un outil qui sert à Lysi dès lundi. Petit et fini.</div>
-<div><b>2 · Chacun choisit son rôle</b>À l'oral. On peut en cumuler deux.</div>
-<div><b>3 · Personne sur le carreau</b>Le garant d'équipe y veille toutes les 20 minutes.</div>
+<h2>Le déroulé</h2>
+<div class="phases" id="phases">
+<div data-debut="14:00" data-fin="14:30"><span class="h">14h00</span><b>Brainstorm</b>Tous ensemble, on choisit l'outil. Puis chacun prend son rôle, et go.</div>
+<div data-debut="14:30" data-fin="15:30"><span class="h">14h30</span><b>Construire</b>Une première version qui tourne. Point d'étape à 15h15.</div>
+<div data-debut="15:30" data-fin="15:40"><span class="h">15h30</span><b>Pause</b>On peut changer de rôle.</div>
+<div data-debut="15:40" data-fin="16:25"><span class="h">15h40</span><b>Tester et corriger</b>On casse, on répare.</div>
+<div data-debut="16:25" data-fin="17:00"><span class="h">16h25</span><b>Démo</b>Stop des ajouts. Démo à 16h40, tour de table à 16h50.</div>
 </div>
-<div class="frise" id="frise"></div>
-<p class="small">Aucun nom de client réel ni chiffre qui l'identifie : des exemples anonymisés suffisent.</p>
+<p class="small">Un bon outil : quelqu'un de Lysi s'en sert lundi, il tient en 2 heures, on peut le montrer tourner.</p>
 </section>
 
-<details class="phase" data-debut="14:00" data-fin="14:30">
-<summary><span class="num">1</span><span class="titre"><b>Brainstorm, tout le monde</b><span>14h00 - 14h30 · obligatoire, avant les rôles</span></span></summary>
-<div class="corps">
-<div class="tous"><b>Tout le monde</b>Pas encore de rôle. Chacun participe.</div>
-<ol class="etapes">
-<li><b>5 min, en silence.</b> Chacun écrit 3 idées d'outil : « un outil qui [fait quoi] pour [qui] ». Partez d'une tâche que vous faites chaque semaine.</li>
-<li><b>15 min, tour de table.</b> Chacun lit ses idées, 1 minute maximum. On ne critique pas, on regroupe les idées proches.</li>
-<li><b>5 min, vote.</b> Deux voix par personne, à main levée. L'idée gagnante doit passer les 3 tests : on s'en sert lundi, ça tient en 2 heures, on peut le montrer tourner.</li>
-<li><b>5 min, rôles.</b> Chacun annonce son rôle (liste en bas). Les 5 rôles à étoile doivent être pris.</li>
-</ol>
-</div>
-</details>
+<section id="roles">
+<h2>Les rôles</h2>
+<p>Chacun choisit le sien. On peut en cumuler deux. Les rôles <b>obligatoires</b> doivent être pris avant de démarrer.</p>
 
-<details class="phase" data-debut="14:30" data-fin="14:45">
-<summary><span class="num">2</span><span class="titre"><b>Cadrage</b><span>14h30 - 14h45</span></span></summary>
-<div class="corps">
-<ul class="qui">
-<li><span class="tag">Voix du consultant</span><span>Remplit la fiche de cadrage ci-dessous, à voix haute, avec toute l'équipe.</span></li>
-<li><span class="tag">Chef de produit</span><span>Tranche chaque point en 2 minutes maximum. Coupe ce qui est trop gros.</span></li>
-<li><span class="tag">Préparateur</span><span>Commence à réunir les exemples anonymisés et le cas de test.</span></li>
-<li><span class="tag">Tous les autres</span><span>Proposent, puis se mettent en place pour la phase 3.</span></li>
+<p class="fam">Piloter</p>
+<div class="role"><h3>Chef de produit</h3><span class="nb oblig">Obligatoire · 1 personne</span>
+<p class="mission">Tu es responsable de l'outil. Tu décides.</p>
+<ul>
+<li>Tu animes le brainstorm et tu fais trancher le choix de l'outil.</li>
+<li>Pendant la construction, tu tranches chaque débat en 2 minutes maximum.</li>
+<li>Tu dis non à tout ajout qui ne sert pas le besoin de départ : petit et fini, c'est mieux que grand et à moitié fait.</li>
+<li>À 15h15, tu décides ce qu'on garde et ce qu'on laisse tomber.</li>
 </ul>
-<div class="prompt"><button class="copy">Copier</button>Outil : [nom court]
-Pour qui : [quel consultant, dans quelle situation]
-Le besoin : [ce qu'il n'a plus à faire à la main]
-En entrée : [document, notes, tableau]
-En sortie : [format, longueur, charte Lysi]
-Réussi si : [critère vérifiable]
-Cas de test : [exemple anonymisé + résultat attendu]</div>
-</div>
-</details>
+<div class="livre">Tu livres : un outil qui reste simple et qui est fini à 16h25.</div></div>
 
-<details class="phase" data-debut="14:45" data-fin="15:30">
-<summary><span class="num">3</span><span class="titre"><b>Construire</b><span>14h45 - 15h30 · point d'étape à 15h15</span></span></summary>
-<div class="corps">
-<ul class="qui">
-<li><span class="tag">Architectes</span><span>Collent le texte ci-dessous dans Claude avec la fiche de cadrage. Répondent à ses questions. Obtiennent une première version qui tourne.</span></li>
-<li><span class="tag">Préparateur</span><span>Livre aux architectes les exemples et le cas de test avec son résultat attendu.</span></li>
-<li><span class="tag">Testeurs casseurs</span><span>Préparent 5 cas tordus : demande floue, chiffre faux, document incomplet, hors sujet, cas limite.</span></li>
-<li><span class="tag">Scribe</span><span>Commence le mode d'emploi : à quoi ça sert, comment le lancer.</span></li>
-<li><span class="tag">Pitcheur, ambassadeur</span><span>Suivent les architectes et notent le problème, la solution, les choix faits.</span></li>
-<li><span class="tag">À 15h15</span><span>Démo interne de 3 minutes. La voix du consultant dit si ça sert. Le chef de produit tranche ce qu'on garde.</span></li>
+<div class="role"><h3>Garant d'équipe</h3><span class="nb oblig">Obligatoire · 1 personne</span>
+<p class="mission">Tu veilles à ce que personne ne reste sur le carreau.</p>
+<ul>
+<li>Toutes les 20 minutes, tu fais le tour : qui travaille sur quoi ?</li>
+<li>Si quelqu'un attend ou décroche, tu lui trouves une tâche avec un autre rôle.</li>
+<li>À 16h50, tu mènes le tour de table : chacun dit ce que son rôle a apporté et ce qu'il met en place dans les 30 jours.</li>
 </ul>
-<div class="prompt"><button class="copy">Copier</button>Nous construisons un skill pour l'équipe Lysi. Voici notre fiche de cadrage :
-[coller la fiche]
+<div class="livre">Tu livres : une équipe où tout le monde a travaillé.</div></div>
+
+<div class="role"><h3>Voix du consultant</h3><span class="nb">1 personne</span>
+<p class="mission">Tu joues celui qui utilisera l'outil lundi matin.</p>
+<ul>
+<li>Au départ, tu décris précisément ton besoin : ce que tu fais aujourd'hui à la main, ce que tu veux obtenir.</li>
+<li>Tu dis ce qui te sert et ce qui ne te sert pas, sans politesse.</li>
+<li>À 15h15, tu essaies l'outil et tu dis : « je m'en servirais » ou « pas encore, parce que… ».</li>
+</ul>
+<div class="livre">Tu livres : un outil vraiment utile, pas seulement joli.</div></div>
+
+<div class="role"><h3>Maître du temps</h3><span class="nb">1 personne · cumulable</span>
+<p class="mission">Tu tiens l'horaire avec cette page.</p>
+<ul>
+<li>Tu annonces chaque phase et le temps qui reste.</li>
+<li>Tu lances le point d'étape de 15h15 et le stop de 16h25.</li>
+<li>Tu coupes les discussions qui débordent.</li>
+</ul>
+<div class="livre">Tu livres : une démo qui démarre à 16h40 pile.</div></div>
+
+<div class="role"><h3>Scribe</h3><span class="nb">1 personne</span>
+<p class="mission">Tu écris le mode d'emploi de l'outil.</p>
+<ul>
+<li>Tu suis la construction et tu notes : à quoi sert l'outil, comment le lancer, un exemple de demande, ce qu'il ne fait pas.</li>
+<li>Tu peux demander à Claude : « À partir de ces instructions, écris le mode d'emploi pour un consultant qui ne l'a pas construit, une page maximum. »</li>
+</ul>
+<div class="livre">Tu livres : un mode d'emploi d'une page, pour que Lysi l'utilise après le bootcamp.</div></div>
+
+<p class="fam">Construire</p>
+<div class="role"><h3>Architectes</h3><span class="nb oblig">Obligatoire · 2 personnes</span>
+<p class="mission">Vous construisez l'outil avec Claude.</p>
+<ul>
+<li>Vous ouvrez Claude et collez le texte ci-dessous, avec la description du besoin.</li>
+<li>Vous répondez à ses questions, puis vous obtenez une première version qui tourne sur un vrai cas.</li>
+<li>Ensuite, chaque défaut remonté par les testeurs devient une règle ajoutée aux instructions.</li>
+</ul>
+<div class="prompt"><button class="copy">Copier</button>Nous construisons un skill pour l'équipe Lysi.
+Le besoin : [ce que l'outil doit faire, pour qui]
+En entrée : [ce qu'on lui donne]
+En sortie : [ce qu'il rend, sous quelle forme]
 
 Avant d'écrire quoi que ce soit, pose-nous les questions qui te manquent, une par une.
-Ensuite, rédige le skill : une description qui contient les mots que nous employons vraiment, les étapes, le format de sortie, les interdits et les contrôles avant de rendre.</div>
-</div>
-</details>
+Ensuite, rédige le skill : une description avec les mots que nous employons vraiment, les étapes, le format de sortie, les interdits et les contrôles avant de rendre.</div>
+<div class="livre">Vous livrez : l'outil qui marche.</div></div>
 
-<details class="phase" data-debut="15:30" data-fin="15:40">
-<summary><span class="num">☕</span><span class="titre"><b>Pause</b><span>15h30 - 15h40 · on peut changer de rôle en revenant</span></span></summary>
-</details>
-
-<details class="phase" data-debut="15:40" data-fin="16:25">
-<summary><span class="num">4</span><span class="titre"><b>Casser et corriger</b><span>15h40 - 16h25</span></span></summary>
-<div class="corps">
-<ul class="qui">
-<li><span class="tag">Testeurs casseurs</span><span>Passent leurs 5 cas tordus. Chaque défaut va dans Claude avec le texte ci-dessous, puis est dicté aux architectes.</span></li>
-<li><span class="tag">Architectes</span><span>Ajoutent chaque règle ou contrôle aux instructions, puis relancent le cas de test.</span></li>
-<li><span class="tag">Scribe</span><span>Termine le mode d'emploi, limites comprises. Une page maximum.</span></li>
-<li><span class="tag">Ambassadeur</span><span>Écrit le plan pour lundi : où vit l'outil, qui l'installe, qui l'essaie en premier.</span></li>
-<li><span class="tag">Pitcheur, pilote</span><span>Choisissent le cas de démo et le font tourner une première fois.</span></li>
+<div class="role"><h3>Préparateur</h3><span class="nb">1 personne</span>
+<p class="mission">Tu fournis la matière qui nourrit l'outil.</p>
+<ul>
+<li>Tu rassembles les exemples, modèles et documents dont l'outil a besoin.</li>
+<li>Tu prépares un cas de test avec le résultat attendu, pour savoir si l'outil répond juste.</li>
 </ul>
-<div class="prompt"><button class="copy">Copier</button>Voici ce que l'outil a rendu sur notre cas :
-[coller le résultat]
+<div class="livre">Tu livres : de quoi tester pour de vrai.</div></div>
 
-Le résultat attendu était :
-[coller l'attendu]
-
-Liste chaque écart. Pour chacun, propose la règle ou le contrôle à ajouter aux instructions pour qu'il ne se reproduise pas.</div>
-</div>
-</details>
-
-<details class="phase" data-debut="16:25" data-fin="17:00">
-<summary><span class="num">5</span><span class="titre"><b>Démo</b><span>16h25 stop · 16h40 démo · 16h50 tour de table</span></span></summary>
-<div class="corps">
-<ul class="qui">
-<li><span class="tag">16h25, tout le monde</span><span>Plus aucun ajout. Ce qui est ajouté maintenant plante pendant la démo.</span></li>
-<li><span class="tag">Pitcheur, pilote</span><span>Répètent la démo une fois en entier. 16h40 : 5 minutes devant Clément (problème, solution, démo en direct), puis 5 minutes de questions.</span></li>
-<li><span class="tag">16h50, garant d'équipe</span><span>Mène le tour de table. Chacun en 30 secondes : ce que mon rôle a apporté, et ce que je mets en place dans les 30 jours.</span></li>
+<div class="role"><h3>Testeurs</h3><span class="nb oblig">Obligatoire · 2 personnes</span>
+<p class="mission">Votre travail : faire dérailler l'outil avant la démo.</p>
+<ul>
+<li>Pendant la construction, vous préparez 5 cas pièges : demande floue, chiffre faux, document incomplet, hors sujet, cas limite.</li>
+<li>Dès qu'une version tourne, vous l'attaquez. Chaque défaut, vous le dictez aux architectes.</li>
+<li>Pour transformer un défaut en règle, collez ceci dans Claude :</li>
 </ul>
-<div class="reussi"><b>Réussi si :</b> l'outil tourne devant la salle, le mode d'emploi tient en une page, et les neuf ont travaillé sur une partie.</div>
-</div>
-</details>
+<div class="prompt"><button class="copy">Copier</button>Voici ce que l'outil a rendu : [résultat]
+Voici ce qui était attendu : [attendu]
+Liste chaque écart et propose, pour chacun, la règle à ajouter aux instructions pour qu'il ne se reproduise pas.</div>
+<div class="livre">Vous livrez : la liste des défauts trouvés et corrigés.</div></div>
 
-<section>
-<h2>Les rôles</h2>
-<p class="small"><span class="etoile">★</span> à prendre obligatoirement. 13 places pour 9 personnes, certains en cumulent deux.</p>
-<div class="roles">
-<div><b><span class="etoile">★</span> Chef de produit</b>Porte la vision, tranche en 2 minutes, dit non aux ajouts.</div>
-<div><b><span class="etoile">★</span> Garant d'équipe</b>Toutes les 20 min, vérifie que chacun travaille sur une partie ; donne une tâche à qui attend.</div>
-<div><b>Voix du consultant</b>Joue l'utilisateur de lundi, valide ce qui sert.</div>
-<div><b>Maître du temps</b>Suit cette page, annonce chaque phase. Cumulable.</div>
-<div><b>Scribe</b>Écrit le mode d'emploi d'une page.</div>
-<div><b><span class="etoile">★</span> Architectes (2)</b>Écrivent les instructions avec Claude.</div>
-<div><b>Préparateur</b>Exemples anonymisés et cas de test.</div>
-<div><b><span class="etoile">★</span> Testeurs casseurs (2)</b>Font dérailler l'outil, chaque défaut devient une règle.</div>
-<div><b><span class="etoile">★</span> Pitcheur</b>Prépare et présente la démo.</div>
-<div><b>Pilote de démo</b>Fait tourner l'outil en direct.</div>
-<div><b>Ambassadeur</b>Plan pour que Lysi l'utilise lundi.</div>
-</div>
+<p class="fam">Présenter</p>
+<div class="role"><h3>Pitcheur</h3><span class="nb oblig">Obligatoire · 1 personne</span>
+<p class="mission">Tu présentes l'outil à 16h40.</p>
+<ul>
+<li>Tu suis le travail depuis le début et tu notes les choix faits.</li>
+<li>Tu prépares 5 minutes : le problème, la solution, la démo en direct, ce que ça change pour Lysi.</li>
+<li>Tu répètes une fois en entier après le stop de 16h25.</li>
+</ul>
+<div class="livre">Tu livres : une démo claire de 5 minutes.</div></div>
+
+<div class="role"><h3>Pilote de démo</h3><span class="nb">1 personne</span>
+<p class="mission">Tu fais tourner l'outil en direct pendant la démo.</p>
+<ul>
+<li>Tu choisis le cas de démo avec le pitcheur et tu le fais tourner plusieurs fois avant 16h40.</li>
+<li>Tu prévois une capture du résultat au cas où la démo plante.</li>
+</ul>
+<div class="livre">Tu livres : une démo qui ne plante pas.</div></div>
+
+<div class="role"><h3>Ambassadeur</h3><span class="nb">1 personne</span>
+<p class="mission">Tu fais en sorte que l'outil soit utilisé après aujourd'hui.</p>
+<ul>
+<li>Tu écris le plan pour lundi : où vit l'outil, qui l'installe, qui l'essaie en premier, qui le maintient.</li>
+<li>Tu le présentes en 1 minute à la fin de la démo.</li>
+</ul>
+<div class="livre">Tu livres : trois lignes de plan de déploiement.</div></div>
 </section>
 
 </main>
 <footer>Formateur : Clément Predo, Axem IA · <a href="index.html">Sommaire du kit</a></footer>
 <script>
-document.addEventListener("click",function(e){var t=e.target;if(!t.classList.contains("copy"))return;e.preventDefault();var txt=t.parentElement.innerText.replace(/^Copier\s*/,"");navigator.clipboard.writeText(txt).then(function(){t.textContent="Copié";setTimeout(function(){t.textContent="Copier"},1500)})});
-var JOUR="2026-09-18",P=[].slice.call(document.querySelectorAll("details.phase")),frise=document.getElementById("frise"),courant=-2;
-P.forEach(function(){frise.appendChild(document.createElement("span"))});
+document.addEventListener("click",function(e){var t=e.target;if(!t.classList.contains("copy"))return;var txt=t.parentElement.innerText.replace(/^Copier\s*/,"");navigator.clipboard.writeText(txt).then(function(){t.textContent="Copié";setTimeout(function(){t.textContent="Copier"},1500)})});
+var JOUR="2026-09-18",P=[].slice.call(document.querySelectorAll("#phases div"));
 function t(h){return new Date(JOUR+"T"+h+":00+02:00").getTime()}
 function fmt(ms){var m=Math.floor(ms/60000),s=Math.floor(ms%60000/1000);return String(m).padStart(2,"0")+":"+String(s).padStart(2,"0")}
-function nom(p){return p.querySelector(".titre b").textContent}
+function nom(p){return p.querySelector("b").textContent}
 function maj(){var n=Date.now(),idx=-1;
-P.forEach(function(p,i){var d=t(p.dataset.debut),f=t(p.dataset.fin);p.classList.toggle("actif",n>=d&&n<f);p.classList.toggle("fini",n>=f);frise.children[i].className=n>=f?"fait":(n>=d?"actif":"");if(n>=d&&n<f)idx=i});
+P.forEach(function(p,i){var d=t(p.dataset.debut),f=t(p.dataset.fin);p.classList.toggle("actif",n>=d&&n<f);p.classList.toggle("fini",n>=f);if(n>=d&&n<f)idx=i});
 var ch=document.getElementById("chrono"),q=document.getElementById("quoi"),a=document.getElementById("apres");
-if(idx>=0){var p=P[idx];ch.textContent=fmt(t(p.dataset.fin)-n);q.textContent=nom(p);a.textContent=P[idx+1]?"Ensuite : "+nom(P[idx+1]):"Fin à 17h00"}
-else if(n<t("14:00")){ch.textContent=fmt(Math.max(0,t("14:00")-n)).slice(-5);q.textContent="L'atelier commence à 14h00";a.textContent="Ensuite : "+nom(P[0])}
-else{ch.textContent="✓";q.textContent="Atelier terminé. Bravo à toute l'équipe.";a.textContent=""}
-if(idx!==courant){courant=idx;P.forEach(function(p,i){p.open=(i===idx)||(idx<0&&n<t("14:00")&&i===0)})}}
+if(idx>=0){ch.textContent=fmt(t(P[idx].dataset.fin)-n);q.textContent=nom(P[idx]);a.textContent=P[idx+1]?"Ensuite : "+nom(P[idx+1]):"Fin à 17h00"}
+else if(n<t("14:00")){ch.textContent="14h00";q.textContent="L'atelier commence à 14h00";a.textContent="Ensuite : Brainstorm"}
+else{ch.textContent="✓";q.textContent="Atelier terminé. Bravo à toute l'équipe.";a.textContent=""}}
 maj();setInterval(maj,1000);
 </script>
 </body>
